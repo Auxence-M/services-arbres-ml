@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.page-image {
+  margin-top: -25px;
+  background-position: center;
+  background-size: cover;
+  min-height: 50vh;
+  color: black;
+}
+
+.modal-90w {
+  min-width: 75%;
+}
+
+.primary-color {
+  background-color: #73B665;
+}
+
+.secondary-color {
+  background-color: #A4D39B;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  input {
+    width: 80% !important;
+  }
+
+  textarea {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 50rem;
+  }
+
+  input {
+    width: 50% !important;
+  }
+
+  textarea {
+    width: 50% !important;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .card {
+    width: 40rem;
+  }
+
+  input {
+    width: 50% !important;
+  }
+
+  textarea {
+    width: 50% !important;
+  }
+}
