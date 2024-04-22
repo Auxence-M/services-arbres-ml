@@ -4,14 +4,17 @@ import PageImage from "../PageImage";
 
 function Realisations () {
 
-    const pruningSrc1 = "/src/assets/images/pruning-1.jpg";
-    const pruningSrc2 = "/src/assets/images/pruning-2.jpg";
+    const pruningSrc1 = "/src/assets/images/showcases/pruning-1.jpg";
+    const pruningSrc2 = "/src/assets/images/showcases/pruning-2.jpg";
 
-    const fellingSrc1 = "/src/assets/images/felling-1.jpg"
-    const fellingSrc2 = "/src/assets/images/felling-2.jpg"
+    const fellingSrc1 = "/src/assets/images/showcases/felling-1.jpg"
+    const fellingSrc2 = "/src/assets/images/showcases/felling-2.jpg"
 
-    const shreddingSrc1 = "/src/assets/images/shredding-1.jpg"
-    const shreddingSrc2 = "/src/assets/images/shredding-2.jpg"
+    const shreddingSrc1 = "/src/assets/images/showcases/shredding-1.jpg"
+    const shreddingSrc2 = "/src/assets/images/showcases/shredding-2.jpg"
+
+    const hedgeTrimmingSrc1 = "/src/assets/images/showcases/hedge-trimming-1.jpg"
+    const hedgeTrimmingSrc2 = "/src/assets/images/showcases/hedge-trimming-2.jpg"
 
     const [modalShow, setModalShow] = useState(false);
     const [modalSrc, setModalSrc] = useState("");
@@ -19,6 +22,7 @@ function Realisations () {
     const [hideFelling, setHideFelling] = useState(false);
     const [hideShredding, setHideShredding] = useState(false);
     const [hidePruning, setHidePruning] = useState(false);
+    const [hideHedgeTrimming, setHideHedgeTrimming] = useState(false);
 
     const realisationsImageStyle = {
         backgroundImage: `url("/src/assets/images/realisation-img.jpg")`
@@ -45,18 +49,27 @@ function Realisations () {
             setHideFelling(false);
             setHideShredding(true);
             setHidePruning(true);
+            setHideHedgeTrimming(true);
         } else if (selection === "SHREDDING") {
             setHideFelling(true);
             setHideShredding(false);
             setHidePruning(true);
+            setHideHedgeTrimming(true);
         } else if (selection === "PRUNING") {
             setHideFelling(true);
             setHideShredding(true);
             setHidePruning(false);
+            setHideHedgeTrimming(true);
+        } else if (selection === "HEDGE TRIMMING") {
+            setHideFelling(true);
+            setHideShredding(true);
+            setHidePruning(true);
+            setHideHedgeTrimming(false);
         } else {
             setHideFelling(false);
             setHideShredding(false);
             setHidePruning(false);
+            setHideHedgeTrimming(false);
         }
     }
 
@@ -74,8 +87,9 @@ function Realisations () {
                         <select className="form-select" id="serviceSelect" defaultValue="DEFAULT" onChange={handleSelectChange}>
                             <option value="DEFAULT">Tous les services</option>
                             <option value="FELLING">Abattage</option>
-                            <option value="SHREDDING">Déchiquetage</option>
                             <option value="PRUNING">Élagage</option>
+                            <option value="SHREDDING">Homme au sol</option>
+                            <option value="HEDGE TRIMMING">Taillage de haies</option>
                         </select>
                     </div>
 
@@ -96,8 +110,18 @@ function Realisations () {
                     </div>
                 </div>
 
+                <div className="row mb-3" hidden={hidePruning}>
+                    <h5>Élagages</h5>
+                    <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
+                        <img src={pruningSrc1} className="img-fluid" alt="abattage-1" data-src={pruningSrc1} onClick={handleModalShow}/>
+                    </div>
+                    <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
+                        <img src={pruningSrc2} className="img-fluid" alt="abattage-1" data-src={pruningSrc2} onClick={handleModalShow}/>
+                    </div>
+                </div>
+
                 <div className="row mb-3" hidden={hideShredding}>
-                    <h5>Déchiquetages</h5>
+                    <h5>Homme au sol</h5>
                     <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
                         <img src={shreddingSrc1} className="img-fluid" alt="abattage-1" data-src={shreddingSrc1} onClick={handleModalShow}/>
                     </div>
@@ -106,13 +130,13 @@ function Realisations () {
                     </div>
                 </div>
 
-                <div className="row mb-3" hidden={hidePruning}>
-                    <h5>Élagages</h5>
+                <div className="row mb-3" hidden={hideHedgeTrimming}>
+                    <h5>Taillage de haies</h5>
                     <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
-                        <img src={pruningSrc1} className="img-fluid" alt="abattage-1" data-src={pruningSrc1} onClick={handleModalShow}/>
+                        <img src={hedgeTrimmingSrc1} className="img-fluid" alt="taillage-haies-1" data-src={hedgeTrimmingSrc1} onClick={handleModalShow}/>
                     </div>
                     <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
-                        <img src={pruningSrc2} className="img-fluid" alt="abattage-1" data-src={pruningSrc2} onClick={handleModalShow}/>
+                        <img src={hedgeTrimmingSrc2} className="img-fluid" alt="taillage-haies-2" data-src={hedgeTrimmingSrc2} onClick={handleModalShow}/>
                     </div>
                 </div>
             </div>
