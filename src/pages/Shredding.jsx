@@ -1,7 +1,7 @@
 function Shredding() {
     return(
         <div className="shredding">
-            <h1>Page déchiquetage</h1>
+            <h1>Page Homme au sol</h1>
         </div>
     );
 }

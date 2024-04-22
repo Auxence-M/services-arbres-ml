@@ -14,7 +14,7 @@ function Home() {
             <div className="container-fluid d-flex page-image justify-content-center align-items-center" 
                 style={homeImageStyle}>
                 <div className="text-center">
-                    <h1>Services d'Arbres ML</h1>                   
+                    <h1>ArboML</h1>                   
                     <h4 className="text-uppercase mb-3">
                         La santé de vos arbres est notre priorité absolue.
                     </h4>
@@ -25,11 +25,11 @@ function Home() {
                     <div className="row justify-content-center align-items-center">
                         <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
                             <h4>Services d'entretien d'arbres á Boucherville et aux environs</h4>
-                            <p className="my-3">
-                                Services d'arbres ML offres des services d'entretien d'arbres (élagage, restructuration, émondage, etc.) à Boucherville et dans ses alentours. 
+                            <p className="my-3" style={{ textAlign: "justify"}}>
+                                ArboML offres des services d'entretien d'arbres (élagage émondage, taillage, etc.) à Boucherville et dans ses alentours. 
                                 Vous pouvez nous contacter par courriel ou nous appeler en utilisant les informations affichées sur notre page Contact. 
                                 Lorsque vous nous contactez, nous devons d'abord effectuer une évaluation afin de pouvoir vous donner une estimation. L'évaluation est offerte gratuitement. 
-                                N'hésitez pas à <a className="fw-bold" href="/contactez-nous" style={{color: "green"}}>nous contacter</a> si vous avez plus de questions. Merci.
+                                N'hésitez pas à <a className="fw-bold" href="/contactez-nous" style={{color: "#73B665"}}>nous contacter</a> si vous avez plus de questions. Merci.
                             </p>
                         </div>
                         <div className="col-md-5 col-lg-5 col-xl-4 my-4">
@@ -51,8 +51,7 @@ function Home() {
                                     <li>Boucherville,</li>
                                     <li>Longueuil</li>
                                     <li>Varenes,</li>
-                                    <li>Saint julie,</li>
-                                    <li>Montreal,</li>
+                                    <li>Saint julie</li>
                                 </ul>
                             </div>
                         </div>

@@ -11,6 +11,7 @@ import Felling from "./pages/Felling";
 import Shredding from "./pages/Shredding";
 import Pruning from "./pages/Pruning";
 import Realisations from "./pages/Realisations";
+import HedgeTrimming from "./pages/HedgeTrimming";
 
 const router  = createBrowserRouter(
   createRoutesFromElements(
@@ -22,8 +23,9 @@ const router  = createBrowserRouter(
       <Route path="a-propos" element={<About></About>}></Route>
       <Route path="services">
         <Route path="abattage" element={<Felling></Felling>}></Route>
-        <Route path="déchiquetage" element={<Shredding></Shredding>}></Route>
+        <Route path="homme-au-sol" element={<Shredding></Shredding>}></Route>
         <Route path="élagage" element={<Pruning></Pruning>}></Route>
+        <Route path="taillage-de-haies" element={<HedgeTrimming></HedgeTrimming>}></Route>
       </Route>
       <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
     </Route>

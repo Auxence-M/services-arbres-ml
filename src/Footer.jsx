@@ -6,7 +6,7 @@ function Footer() {
                     <section>
                         <div className="row">
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                                <h6 className="text-uppercase mb-3 fw-bold">Services d'Arbres ML</h6>
+                                <h6 className="text-uppercase mb-3 fw-bold">ArboML</h6>
                                 <p className="my-0 mb-2">
                                     Services d'entretien d'arbres á Boucherville et aux environs.
                                 </p>
@@ -18,12 +18,15 @@ function Footer() {
                                 <h6 className="text-uppercase mb-3 fw-bold">Services</h6>
                                 <p className="my-0">
                                     <a href="/services/abattage">Abattage</a>
-                                </p>
-                                <p className="my-2">
-                                    <a href="/services/déchiquetage">Déchiquetage</a>
-                                </p>
+                                </p>                              
                                 <p className="my-2">
                                     <a href="/services/élagage">Élagage</a>
+                                </p>
+                                <p className="my-2">
+                                    <a href="/services/homme-au-sol">Homme au sol</a>
+                                </p>
+                                <p className="my-2">
+                                    <a href="/services/taillage-de-haies">Taillage de haies</a>
                                 </p>
                             </div>
 
@@ -47,7 +50,7 @@ function Footer() {
                 <div>
                     <div className="copyright text-center p-3 primary-color">
                         <img className="me-1" src="/src/assets/icons/copyright.svg" alt="Envelope"/>
-                        2024 Copyright: Services d'Arbres ML. Tout droits réservés.
+                        2024 Copyright: ArboML. Tout droits réservés.
                     </div>
                 </div>
             </footer>

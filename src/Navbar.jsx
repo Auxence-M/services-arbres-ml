@@ -25,7 +25,7 @@ function Navbar() {
         <header className="header sticky-top">
             <nav className="navbar navbar-expand-lg navbar-light primary-color">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="/acceuil">Services d'Arbres ML</a>
+                        <a className="navbar-brand" href="/acceuil">ArboML</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
@@ -39,9 +39,10 @@ function Navbar() {
                                         Nos services
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a className="dropdown-item" href="/services/abattage">Abattage</a></li>
-                                        <li><a className="dropdown-item" href="/services/déchiquetage">Déchiquetage</a></li>
+                                        <li><a className="dropdown-item" href="/services/abattage">Abattage</a></li>                                        
                                         <li><a className="dropdown-item" href="/services/élagage">Élagage</a></li>
+                                        <li><a className="dropdown-item" href="/services/homme-au-sol">Homme au sol</a></li>
+                                        <li><a className="dropdown-item" href="/services/taillage-de-haies">Taillage de haies</a></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item">
