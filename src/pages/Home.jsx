@@ -24,10 +24,10 @@ function Home() {
                 <div className="container-fluid my-4">
                     <div className="row justify-content-center align-items-center">
                         <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
-                            <h4>Services d'entretien d'arbres á Boucherville et aux environs</h4>
+                            <h4>Services d'entretien d'arbres dans la rive-sud de Montréal</h4>
                             <p className="my-3" style={{ textAlign: "justify"}}>
-                                ArboML offres des services d'entretien d'arbres (élagage émondage, taillage, etc.) à Boucherville et dans ses alentours. 
-                                Vous pouvez nous contacter par courriel ou nous appeler en utilisant les informations affichées sur notre page Contact. 
+                                ArboML offres des services d'entretien d'arbres (élagage, abattage, taillage, etc.) dans la rive-sud de Montréal. 
+                                Vous pouvez nous contacter par courriel ou nous appeler en utilisant les informations affichées sur notre page de contact. 
                                 Lorsque vous nous contactez, nous devons d'abord effectuer une évaluation afin de pouvoir vous donner une estimation. L'évaluation est offerte gratuitement. 
                                 N'hésitez pas à <a className="fw-bold" href="/contactez-nous" style={{color: "#73B665"}}>nous contacter</a> si vous avez plus de questions. Merci.
                             </p>
@@ -44,7 +44,7 @@ function Home() {
                         </div>
                         <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
                             <h4>Zones de services</h4>
-                            <p className="my-3">Nous offrons nos services dans plusieurs régions, notamment à Boucherville et aux alentours. 
+                            <p className="my-3">Nous offrons nos services dans plusieurs régions dans la rive-sud de Montréal. 
                             Vous trouverez ci-dessous une liste exhaustive de toutes les régions que nous couvrons.</p>
                             <div>
                                 <ul>

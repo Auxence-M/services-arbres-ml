@@ -41,6 +41,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.logo {
+  transition: transform .2s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 600px) {
   .card {
     width: 90%;

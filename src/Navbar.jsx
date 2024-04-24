@@ -26,7 +26,7 @@ function Navbar() {
             <nav className="navbar navbar-expand-lg primary-color p-0">
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/acceuil">
-                            <img src="/src/assets/images/logo.png" alt="logo" width="50" height="50"/>
+                            <img src="/src/assets/images/logo.png" className="logo" alt="logo" width="55" height="55"/>
                         </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@ function Navbar() {
                                     <a className="nav-link active dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Nos services
                                     </a>
-                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <ul className="dropdown-menu secondary-color" aria-labelledby="navbarDropdown">
                                         <li><a className="dropdown-item" href="/services/abattage">Abattage</a></li>                                        
                                         <li><a className="dropdown-item" href="/services/élagage">Élagage</a></li>
                                         <li><a className="dropdown-item" href="/services/homme-au-sol">Homme au sol</a></li>

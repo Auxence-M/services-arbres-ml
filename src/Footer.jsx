@@ -7,9 +7,9 @@ function Footer() {
                         <div className="row">
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                                 {/* <h6 className="text-uppercase mb-3 fw-bold">ArboML</h6> */}
-                                <img src="/src/assets/images/logo-footer.png" alt="logo" width="85" height="85"/>
+                                <img src="/src/assets/images/logo-footer.png" alt="logo" width="95" height="95"/>
                                 <p className="my-0 mb-2">
-                                    Services d'entretien d'arbres á Boucherville et aux environs.
+                                    Services d'entretien d'arbres dans la rive-sud de Montréal.
                                 </p>
                             </div>
 
