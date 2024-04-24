@@ -8,7 +8,7 @@ function Navbar() {
     function changeNavbarStyle() {
         if (window.scrollY >= 80) {
             setNavbarStyle({
-                backgroundColor: "#5da84e",
+                backgroundColor: "#4D8443",
             });
         } else {
             setNavbarStyle({
@@ -23,9 +23,11 @@ function Navbar() {
 
     return(
         <header className="header sticky-top">
-            <nav className="navbar navbar-expand-lg navbar-light primary-color">
+            <nav className="navbar navbar-expand-lg primary-color p-0">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="/acceuil">ArboML</a>
+                        <a className="navbar-brand" href="/acceuil">
+                            <img src="/src/assets/images/logo.png" alt="logo" width="55" height="55"/>
+                        </a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
