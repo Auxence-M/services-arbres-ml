@@ -8,6 +8,9 @@ function About() {
     return(
         <div className="about">
             <PageImage style={aboutImageStyle} title={"Qui sommes nous"}></PageImage>
+            
+            <div className="container-fluid">
+            </div>
         </div>
     );
 }

@@ -89,7 +89,7 @@ function Realisations () {
                             <option value="FELLING">Abattage</option>
                             <option value="PRUNING">Élagage</option>
                             <option value="SHREDDING">Homme au sol</option>
-                            <option value="HEDGE TRIMMING">Taillage de haies</option>
+                            <option value="HEDGE TRIMMING">Taille de haies</option>
                         </select>
                     </div>
 
@@ -131,7 +131,7 @@ function Realisations () {
                 </div>
 
                 <div className="row mb-3" hidden={hideHedgeTrimming}>
-                    <h5>Taillage de haies</h5>
+                    <h5>Taille de haies</h5>
                     <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
                         <img src={hedgeTrimmingSrc1} className="img-fluid" alt="taillage-haies-1" data-src={hedgeTrimmingSrc1} onClick={handleModalShow}/>
                     </div>

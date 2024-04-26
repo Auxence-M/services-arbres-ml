@@ -44,7 +44,7 @@ function Navbar() {
                                         <li><a className="dropdown-item" href="/services/abattage">Abattage</a></li>                                        
                                         <li><a className="dropdown-item" href="/services/élagage">Élagage</a></li>
                                         <li><a className="dropdown-item" href="/services/homme-au-sol">Homme au sol</a></li>
-                                        <li><a className="dropdown-item" href="/services/taillage-de-haies">Taillage de haies</a></li>
+                                        <li><a className="dropdown-item" href="/services/taillage-de-haies">Taille de haies</a></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item">
