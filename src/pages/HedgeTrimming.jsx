@@ -5,9 +5,10 @@ function HedgeTrimming() {
     const hedgeTrimmingImageStyle = {
         backgroundImage: `url("/src/assets/images/hedge-trimming-img.jpg")`
     }
+    
     return(
         <div className="service-hedge-trimming">
-            <PageImage style={hedgeTrimmingImageStyle} title={"Taillage de haies"}></PageImage>
+            <PageImage style={hedgeTrimmingImageStyle} title={"Taille de haies"}></PageImage>
 
             <div className="container-fluid mt-3">
                 <section>
