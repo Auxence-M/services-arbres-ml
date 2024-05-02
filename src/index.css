@@ -32,6 +32,22 @@ main {
   background-color: #A4D39B;
 }
 
+.form-submit-button {
+  background-color: #73B665;
+  width: 30%;
+  transition: all .2s;
+}
+
+.form-submit-button:disabled {
+  background-color: #4A993A;
+  width: 30%;
+}
+
+.form-submit-button:hover {
+  background-color: #4A993A;
+  transform: scale(1.05);
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -42,51 +58,22 @@ a:hover {
 }
 
 .logo {
-  transition: transform .2s;
+  transition: all .2s;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (min-width: 992px) {
   .card {
-    width: 90%;
-  }
-
-  input {
-    width: 80% !important;
-  }
-
-  textarea {
-    width: 80% !important;
+    width: 40%;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .card {
-    width: 50rem;
-  }
-
-  input {
-    width: 50% !important;
-  }
-
-  textarea {
-    width: 50% !important;
-  }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-  .card {
-    width: 40rem;
-  }
-
-  input {
-    width: 50% !important;
-  }
-
-  textarea {
-    width: 50% !important;
+    width: 75%;
   }
 }
