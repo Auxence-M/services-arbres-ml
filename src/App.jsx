@@ -13,6 +13,25 @@ import Pruning from "./pages/Pruning";
 import Realisations from "./pages/Realisations";
 import HedgeTrimming from "./pages/HedgeTrimming";
 
+import { initializeApp } from "firebase/app";
+import { getFunctions } from "firebase/functions";
+
+// Firebase cloud functions init
+const firebaseConfig = {
+    apiKey: "AIzaSyDAGIMExrOtrcow7XBiLgCLiCm23vmFcfA",
+    authDomain: "arboml-form.firebaseapp.com",
+    projectId: "arboml-form",
+    storageBucket: "arboml-form.appspot.com",
+    messagingSenderId: "608132718696",
+    appId: "1:608132718696:web:3611463d452696a556dbdd"
+  };
+
+   //initialize a Firebase instance
+  const app = initializeApp(firebaseConfig);
+
+  //initialize Cloud Functions through Firebase
+  const functions = getFunctions(app);
+
 const router  = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root></Root>}>
@@ -30,7 +49,7 @@ const router  = createBrowserRouter(
       <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
     </Route>
   )
-)
+);
 
 function App() {
   return (
