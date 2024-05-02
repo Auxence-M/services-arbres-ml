@@ -29,7 +29,7 @@ function Realisations () {
     }
 
     function handleModalShow(event) {
-        const imageSrc = event.currentTarget.getAttribute("data-src")
+        const imageSrc = event.currentTarget.getAttribute("data-src");
         setModalSrc(imageSrc);
         setModalShow(true);
     }
@@ -142,7 +142,7 @@ function Realisations () {
             </div>
             
             <Modal show={modalShow} onHide={handleModalClose} centered dialogClassName="modal-90w">
-                <Modal.Body style={{padding: "0"}}>
+                <Modal.Body style={{padding: 0}}>
                     <img src={modalSrc} className="img-fluid" alt="modal-images" /> 
                 </Modal.Body>
             </Modal>

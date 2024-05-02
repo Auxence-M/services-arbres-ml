@@ -44,7 +44,7 @@ function Home() {
                         </div>
                         <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
                             <h4>Zones de services</h4>
-                            <p className="my-3">Nous desservons nos services dans plusieurs régions dans la rive-sud de Montréal. 
+                            <p className="my-3">Nous desservons nos services dans plusieurs régions sur la rive-sud de Montréal. 
                             Vous trouverez ci-dessous une liste exhaustive de toutes les régions que nous couvrons.</p>
                             <div>
                                 <ul>
