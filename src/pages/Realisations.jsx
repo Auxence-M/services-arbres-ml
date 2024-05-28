@@ -99,7 +99,7 @@ function Realisations () {
                 </form>
             </div>
 
-            <div className="container-fluid mt-3">
+            <div className="container-fluid mt-3 pb-4">
                 <div className="row mb-3" hidden={hideFelling}>
                     <h5>Abattages</h5>
                     <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
@@ -130,7 +130,7 @@ function Realisations () {
                     </div>
                 </div>
 
-                <div className="row mb-3" hidden={hideHedgeTrimming}>
+                <div className="row" hidden={hideHedgeTrimming}>
                     <h5>Taille de haies</h5>
                     <div className="col-md-6 col-lg-6 col-xl-6 mx-auto mt-3">
                         <img src={hedgeTrimmingSrc1} className="img-fluid" alt="taillage-haies-1" data-src={hedgeTrimmingSrc1} onClick={handleModalShow}/>

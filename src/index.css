@@ -4,16 +4,16 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  --primary: #73B665;
+  --secondary: #A4D39B;
+  --main: #CCE6C7;
 }
 
 main {
-  margin-top: 25px;
-  margin-bottom: 25px;
   text-align: center;
 }
 
 .page-image {
-  margin-top: -25px;
   background-position: center;
   background-size: cover;
   min-height: 50vh;
@@ -25,27 +25,34 @@ main {
 }
 
 .primary-color {
-  background-color: #73B665;
+  background-color: var(--primary);
 }
 
 .secondary-color {
-  background-color: #A4D39B;
+  background-color: var(--secondary);
+}
+
+.main-color {
+  background-color: var(--main);
 }
 
 .form-submit-button {
-  background-color: #73B665;
-  width: 30%;
+  background-color: var(--primary);
   transition: all .2s;
+  font-size: larger;
+  border-radius: 50rem;
 }
 
 .form-submit-button:disabled {
   background-color: #4A993A;
-  width: 30%;
 }
 
 .form-submit-button:hover {
   background-color: #4A993A;
-  transform: scale(1.05);
+}
+
+.tel-link:hover {
+  text-decoration: none;
 }
 
 a {
@@ -62,7 +69,7 @@ a:hover {
 }
 
 .logo:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 

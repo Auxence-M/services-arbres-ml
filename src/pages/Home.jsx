@@ -4,11 +4,16 @@ function Home() {
         backgroundImage: `url("/src/assets/images/home-img.jpg")`
     }
 
+    const summaryImageSrc = "/src/assets/images/summary-img.jpg"
     const zonesImageSrc = "/src/assets/images/zones-img.jpg"
     const hoursImageSrc = "/src/assets/images/hours-img.jpg"
-    const summaryImageSrc = "/src/assets/images/summary-img.jpg"
-
-    // TDOD: Here
+    
+    // TDOD: change realisation images
+    // TDOD: change zoneImage
+    // TDOD: change hoursImages
+    // TODO: check if services page images are fine
+    // TODO: improve contact form email check pattern
+    // TODO: fix contact form textare do not conserve breaklines
     return (
         <div className="home">
             <div className="container-fluid d-flex page-image justify-content-center align-items-center" 
@@ -23,7 +28,7 @@ function Home() {
             <div>
                 <div className="container-fluid my-4">
                     <div className="row justify-content-center align-items-center">
-                        <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
+                        <div className="col-md-6 col-lg-6 col-xl-6 my-3 text-start">
                             <h4>Services d'entretien d'arbres sur la rive-sud de Montréal</h4>
                             <p className="my-3" style={{ textAlign: "justify"}}>
                                 ArboML offres des services d'entretien d'arbres (élagage, abattage, taillage, etc.) sur la rive-sud de Montréal. 
@@ -32,17 +37,17 @@ function Home() {
                                 N'hésitez pas à <a className="fw-bold" href="/contactez-nous" style={{color: "#73B665"}}>nous contacter</a> si vous avez plus de questions. Merci.
                             </p>
                         </div>
-                        <div className="col-md-5 col-lg-5 col-xl-4 my-4">
+                        <div className="col-md-5 col-lg-5 col-xl-4 my-3">
                             <img src={summaryImageSrc} className="img-fluid" alt="zones-services"/>
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid py-3" style={{backgroundColor: "#DEF0DB"}}>
+                <div className="container-fluid py-3 main-color">
                     <div className="row justify-content-center align-items-center">
-                        <div className="col-md-5 col-lg-5 col-xl-4 my-4">
+                        <div className="col-md-5 col-lg-5 col-xl-4 my-3">
                             <img src={zonesImageSrc} className="img-fluid" alt="zones-services"/>
                         </div>
-                        <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
+                        <div className="col-md-6 col-lg-6 col-xl-6 my-3 text-start">
                             <h4>Zones de services</h4>
                             <p className="my-3">Nous desservons nos services dans plusieurs régions sur la rive-sud de Montréal. 
                             Vous trouverez ci-dessous une liste exhaustive de toutes les régions que nous couvrons.</p>
@@ -57,9 +62,9 @@ function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="container-fluid">
+                <div className="container-fluid p-3">
                     <div className="row justify-content-center align-items-center">
-                    <div className="col-md-6 col-lg-6 col-xl-6 my-4 text-start">
+                    <div className="col-md-6 col-lg-6 col-xl-6 my-3 text-start">
                             <h4>Heures d'ouvertures</h4>
                             <p className="my-3">Veuillez noter que les heures d'ouverture suivantes sont flexibles et peuvent changer ou varier. Merci.</p>
                             <div>
@@ -70,7 +75,7 @@ function Home() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-5 col-lg-5 col-xl-4 my-4">
+                        <div className="col-md-5 col-lg-5 col-xl-4 my-3">
                             <img src={hoursImageSrc} className="img-fluid" alt="heures-ouverture"/>
                         </div>                    
                     </div>

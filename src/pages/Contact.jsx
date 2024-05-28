@@ -2,13 +2,10 @@ import { useState } from "react";
 import PageImage from "../PageImage";
 import { httpsCallable, getFunctions } from "firebase/functions";
 import Toast from 'react-bootstrap/Toast';
-import CloseButton from 'react-bootstrap/CloseButton';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 
 function Contact() {
 
-    // Finish contact form logic
-    // TODO: Hosting with firebase vs Hosting with Vercel
     const contactImageStyle = {
         backgroundImage: `url("/src/assets/images/contact-img.jpg")`
     }
@@ -17,6 +14,7 @@ function Contact() {
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [message, setMessage] = useState("");
+
     const [sendingMessage, setSendingMessage] = useState(false);
     const [resultMessage, setResultMesage] = useState("");
     const [toastVariation, setToastVariation] = useState("");
@@ -72,7 +70,7 @@ function Contact() {
             setMessage("");
         });
     }
-    
+
     return (
         <div className="contact">
 
@@ -80,7 +78,7 @@ function Contact() {
 
             <div className="container-fluid">
                 <p className="fs-6 my-4">
-                    Vous pouvez nous contacter par mail ou par téléphone. 
+                    Vous pouvez nous contacter par courriel ou par téléphone. 
                     Vous pouvez aussi nous envoyer un message directement en remplissant le formulaire de contact ci-dessous. 
                     Nous éssayerons de vous repondre dans les plus bref délais. Merci
                 </p>
@@ -91,73 +89,89 @@ function Contact() {
                                 <div className="row">
                                     <div className="col">
                                         <img src="/src/assets/icons/envelope.svg" alt="Envelope" width="25" height="25"/>
-                                        <h5 className="card-title mt-2 mb-0">E-mail:</h5>
+                                        <h5 className="card-title mt-2 mb-0">Courriel:</h5>
                                         <p className="card-text">
-                                            <a href="mailto: info@exemple.ca">info@exemple.ca</a>
+                                            <a href="mailto: info@exemple.ca">info@arboml.ca</a>
                                         </p>
                                     </div>
                                     <div className="col">
                                         <img src="/src/assets/icons/telephone.svg" alt="Telephone" width="25" height="25"/>                               
                                         <h5 className="card-title mt-2 mb-0">Téléphone:</h5>        
-                                        <p className="card-text">999 999 9999</p>
+                                        <p className="card-text">
+                                            <a className="tel-link" href="tel: (438) 367-7747">(438) 367-7747</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>                   
                 </div>
-                <div className="row justify-content-center">
+                <div className="row pb-4 justify-content-center">
                     <div className="card border-0 mt-5">
                         <h5 className="card-title mb-3 mt-3">Envoyer nous un message</h5>
                         <form onSubmit={handleSubmit}>
-                            <div className="mb-3">
-                                <label htmlFor="inputName" className="form-label">Nom et Prénom*</label>
-                                <input type="text" className="form-control" 
-                                    id="inputName" aria-describedby="name" 
+                            <div className="form-floating mb-4">
+                                <input type="text" className="form-control"                                    
+                                    id="inputName" 
+                                    placeholder="Votre nom complet"
                                     value={name} 
-                                    onChange={event => {setName(event.target.value)}} required/>
+                                    onChange={event => {setName(event.target.value)}} 
+                                    required>    
+                                </input>
+                                <label htmlFor="inputName" className="form-label">Nom Complet*</label>
                             </div>
-                            <div className="mb-3">
-                                <label htmlFor="inputEmail" className="form-label">Adresse e-mail*</label>
-                                <input type="email" className="form-control" 
-                                    id="inputEmail" aria-describedby="emailHelp" 
+                            <div className="form-floating mb-3">
+                                <input type="email" className="form-control"                                   
+                                    id="inputEmail" 
+                                    placeholder="Votre adresse courriel" 
                                     value={email}
-                                    onChange={event => {setEmail(event.target.value)}} required/>
+                                    onChange={event => {setEmail(event.target.value)}} 
+                                    required>   
+                                </input>
+                                <label htmlFor="inputEmail" className="form-label">Courriel*</label>
                             </div>
-                            <div className="mb-3">
-                                <label htmlFor="inputPhoneNumber" className="form-label">Téléphone*</label>
+                            <div className="form-floating mb-3">
                                 <input type="tel" className="form-control" 
                                     id="inputPhoneNumber" 
-                                    aria-describedby="phoneNumberHelp" 
-                                    value={phoneNumber} 
-                                    onChange={event => {setPhoneNumber(event.target.value)}} required/>
+                                    placeholder="Votre numero de téléphone" 
+                                    value={phoneNumber}
+                                    onChange={event => {setPhoneNumber(event.target.value)}} 
+                                    required>
+                                </input>                                      
+                                <label htmlFor="inputPhoneNumber" className="form-label">Téléphone*</label>
                             </div>
-                            <div className="mb-3">
-                                <label htmlFor="messageTextarea" className="form-label">Message*</label>
+                            <div className="form-floating mb-3">
                                 <textarea className="form-control" 
-                                    id="messageTextarea" rows="4" 
-                                    value={message} 
-                                    onChange={event => {setMessage(event.target.value)}} required></textarea>
+                                    id="messageTextarea"
+                                    placeholder="Laisser un message ici" 
+                                    value={message}
+                                    onChange={event => {setMessage(event.target.value)}} 
+                                    style={{height: "120px"}}
+                                    required>        
+                                </textarea>
+                                <label htmlFor="messageTextarea" className="form-label">Message*</label>
                             </div>
-                            <div className="mb-3">
-                                <button type="submit" className="btn form-submit-button" hidden={sendingMessage}>Envoyer</button>
-                                <button type="button" className=" btn form-submit-button" hidden={!sendingMessage} disabled>
-                                    <span className="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
-                                    <span role="status">Envoi en cours...</span>
+                            <div className=" d-grid mb-3">
+                                <button type="submit" className="btn form-submit-button" hidden={sendingMessage}>
+                                    <span>Envoyer</span>
+                                    <img className="ms-2" src="/src/assets/icons/arrow-right.svg" alt="arrow-send" height="25"/> 
                                 </button>
-
-                                <ToastContainer position="middle-center" style={{zIndex: 1}}>
-                                    <Toast onClose={closeToast} show={showToast} bg={toastVariation} delay={5000} autohide>
-                                        <Toast.Header>
-                                            <img src="/src/assets/images/logo.png" className="rounded me-2" alt="logo" width="20" height="20"/>
-                                            <strong className="me-auto">ARBOML</strong>
-                                        </Toast.Header>
-                                        <Toast.Body>
-                                            {resultMessage}                          
-                                        </Toast.Body>
-                                    </Toast>
-                                </ToastContainer>
-                            </div>                           
+                                <button type="button" className="btn form-submit-button" hidden={!sendingMessage} disabled>
+                                    <span className="spinner-border spinner-border-sm me-2"></span>
+                                    <span>Envoi en cours...</span>
+                                </button>                               
+                            </div>
+                            <ToastContainer position="middle-center" style={{zIndex: 1}}>
+                                <Toast onClose={closeToast} show={showToast} bg={toastVariation} delay={3000} autohide>
+                                    <Toast.Header>
+                                        <img src="/src/assets/images/logo.png" className="rounded me-2" alt="logo" width="20" height="20"/>
+                                        <strong className="me-auto">ARBOML</strong>
+                                    </Toast.Header>
+                                    <Toast.Body>
+                                        {resultMessage}                          
+                                    </Toast.Body>
+                                </Toast>
+                            </ToastContainer>                           
                         </form>
                     </div>   
                 </div>                                         

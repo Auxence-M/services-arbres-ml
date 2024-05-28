@@ -6,7 +6,6 @@ function Footer() {
                     <section>
                         <div className="row">
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                                {/* <h6 className="text-uppercase mb-3 fw-bold">ArboML</h6> */}
                                 <img src="/src/assets/images/logo-footer.png" alt="logo" width="100" height="100"/>
                                 <p className="my-0 mb-2">
                                     Services d'entretien d'arbres dans la rive-sud de Montréal.
@@ -15,7 +14,7 @@ function Footer() {
 
                             <hr className="w-100 clearfix d-md-none" />
 
-                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-3 fw-bold">Services</h6>
                                 <p className="my-0">
                                     <a href="/services/abattage">Abattage</a>
@@ -37,11 +36,11 @@ function Footer() {
                                 <h6 className="text-uppercase mb-3 fw-bold">Contact</h6>
                                 <p className="my-0">
                                     <img className="me-2" src="/src/assets/icons/envelope.svg" alt="Envelope"/>
-                                    <a href="mailto: info@exemple.ca">info@exemple.ca</a>                
+                                    <a href="mailto: info@exemple.ca">info@arboml.ca</a>                
                                 </p>
                                 <p className="my-2">
                                     <img className="me-2" src="/src/assets/icons/telephone.svg" alt="Telephone"/>
-                                    999 999 9999                
+                                    <a className="tel-link" href="tel: (438) 367-7747">(438) 367-7747</a>     
                                 </p>
                             </div>
                         </div>
