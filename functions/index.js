@@ -33,7 +33,7 @@ exports.sendMail = onRequest((req, res) => {
             to: "auxencemedja@gmail.com",
             subject: `Vous avez un nouveau message de ${name} (formulaire de contact)`,
             text: "",
-            html: `<p>Détails du message :<br><br> <b>Nom:</b> ${name},<br><br> <b>Courriel:</b> ${email}, <br><br> <b>Numero de téléphone:</b> ${phoneNumber},<br><br> <b>Message:</b> ${message}<p>`
+            html: `<p style="white-space: pre-wrap;">Détails du message :<br><br> <b>Nom:</b> ${name},<br><br> <b>Courriel:</b> ${email}, <br><br> <b>Numero de téléphone:</b> ${phoneNumber},<br><br> <b>Message:</b> ${message}<p>`
         };
 
         //call the built in `sendMail` function and return different responses upon success and failure
