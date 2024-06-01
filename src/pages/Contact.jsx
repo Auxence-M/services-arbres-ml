@@ -53,7 +53,7 @@ function Contact() {
             setPhoneNumber("");
             setMessage("");
         }).catch((error) => {
-            // get success message from promise
+            // get error message from promise
             const data = error.data;
             const sanitizedMessage = data.message; // for debbugging purposes
  
@@ -110,7 +110,7 @@ function Contact() {
                     <div className="card border-0 mt-5">
                         <h5 className="card-title mb-3 mt-3">Envoyer nous un message</h5>
                         <form onSubmit={handleSubmit}>
-                            <div className="form-floating mb-4">
+                            <div className="form-floating mb-3">
                                 <input type="text" className="form-control"                                    
                                     id="inputName" 
                                     placeholder="Votre nom complet"
