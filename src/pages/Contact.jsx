@@ -13,6 +13,7 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [service, setService] = useState("");
     const [message, setMessage] = useState("");
 
     const [sendingMessage, setSendingMessage] = useState(false);
@@ -27,6 +28,11 @@ function Contact() {
         setShowToast(false);
     }
 
+    function handleSelectChange(event) {
+        const selectValue = event.target.value;
+        setService(selectValue);
+    }
+
     function handleSubmit(event) {
         event.preventDefault();
         setSendingMessage(true); // switch submit button to a loading one
@@ -35,6 +41,7 @@ function Contact() {
             name: name,
             email: email,
             phoneNumber: phoneNumber,
+            service: service,
             message: message
         }).then((result) => {
             // get success message from promise
@@ -51,6 +58,7 @@ function Contact() {
             setName("");
             setEmail("");
             setPhoneNumber("");
+            setService("");
             setMessage("");
         }).catch((error) => {
             // get error message from promise
@@ -67,6 +75,7 @@ function Contact() {
             setName("");
             setEmail("");
             setPhoneNumber("");
+            setService("");
             setMessage("");
         });
     }
@@ -141,6 +150,16 @@ function Contact() {
                                 <label htmlFor="inputPhoneNumber" className="form-label">Téléphone*</label>
                             </div>
                             <div className="form-floating mb-3">
+                                <select className="form-select" id="serviceSelect" defaultValue="" onChange={handleSelectChange} required>
+                                    <option value="">Choissisez un service</option>
+                                    <option value="Abattage">Abattage</option>
+                                    <option value="Élagage">Élagage</option>
+                                    <option value="Homme au sol">Homme au sol</option>
+                                    <option value="Taille de haies">Taille de haies</option>
+                                </select>
+                                <label htmlFor="floatingSelect">Type de services</label>
+                            </div>
+                            <div className="form-floating mb-3">
                                 <textarea className="form-control" 
                                     id="messageTextarea"
                                     placeholder="Laisser un message ici" 
@@ -151,7 +170,7 @@ function Contact() {
                                 </textarea>
                                 <label htmlFor="messageTextarea" className="form-label">Message*</label>
                             </div>
-                            <div className=" d-grid mb-3">
+                            <div className="d-grid mb-3">
                                 <button type="submit" className="btn form-submit-button" hidden={sendingMessage}>
                                     <span>Envoyer</span>
                                     <img className="ms-2" src="/src/assets/icons/arrow-right.svg" alt="arrow-send" height="25"/> 

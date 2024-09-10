@@ -26,7 +26,7 @@ function Footer() {
                                     <a href="/services/homme-au-sol">Homme au sol</a>
                                 </p>
                                 <p className="my-2">
-                                    <a href="/services/taillage-de-haies">Taillage de haies</a>
+                                    <a href="/services/taillage-de-haies">Taille de haies</a>
                                 </p>
                             </div>
 
