@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 });
 
 //export the cloud function called `sendEmail`
-exports.sendMail = onRequest((req, res) => {
+exports.sendMail = onRequest(async (req, res) => {
 
     console.log('from sendEmail function. The request object is: ',JSON.stringify(req.body));
 
@@ -25,6 +25,7 @@ exports.sendMail = onRequest((req, res) => {
         const name = req.body.data.name;
         const email = req.body.data.email;
         const phoneNumber = req.body.data.phoneNumber;
+        const service = req.body.data.service;
         const message = req.body.data.message;
 
         //config the email message
@@ -33,7 +34,9 @@ exports.sendMail = onRequest((req, res) => {
             to: "auxencemedja@gmail.com",
             subject: `Vous avez un nouveau message de ${name} (formulaire de contact)`,
             text: "",
-            html: `<p style="white-space: pre-wrap;">Détails du message :<br><br> <b>Nom:</b> ${name},<br><br> <b>Courriel:</b> ${email}, <br><br> <b>Numero de téléphone:</b> ${phoneNumber},<br><br> <b>Message:</b> ${message}<p>`
+            html: `<p style="white-space: pre-wrap;">Détails du message :<br><br> <b>Nom:</b> ${name},<br><br> <b>Courriel:</b> ${email}, <br><br> <b>Numero de téléphone:</b> ${phoneNumber}, <br><br> <b>Type de service:</b> ${service},<br><br> <b>Message:</b> ${message}<p>`
+
+
         };
 
         //call the built in `sendMail` function and return different responses upon success and failure
