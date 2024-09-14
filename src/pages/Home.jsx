@@ -1,3 +1,6 @@
+import BackToTopButtton from "../components/BackToTopButton";
+import ImageModal from "../components/ImageModal";
+
 function Home() {
 
     const homeImageStyle = {
@@ -11,11 +14,11 @@ function Home() {
     // TDOD: change realisation images
     // TDOD: change zoneImage
     // TDOD: change hoursImages
-    // TODO: check if services page images are fine
     // TODO: improve contact form email check pattern
-    // TODO: fix contact form textare do not conserve breaklines
+    // Cross-Site Scripting on mail form 
     return (
         <div className="home">
+            <BackToTopButtton></BackToTopButtton>         
             <div className="container-fluid d-flex page-image justify-content-center align-items-center" 
                 style={homeImageStyle}>
                 <div className="text-center">
@@ -39,6 +42,7 @@ function Home() {
                         </div>
                         <div className="col-md-5 col-lg-5 col-xl-4 my-3">
                             <img src={summaryImageSrc} className="img-fluid" alt="zones-services"/>
+                            {/* <ImageModal imgSrc={summaryImageSrc}></ImageModal> */}
                         </div>
                     </div>
                 </div>
@@ -46,6 +50,7 @@ function Home() {
                     <div className="row justify-content-center align-items-center">
                         <div className="col-md-5 col-lg-5 col-xl-4 my-3">
                             <img src={zonesImageSrc} className="img-fluid" alt="zones-services"/>
+                            {/* <ImageModal imgSrc={zonesImageSrc}></ImageModal> */}
                         </div>
                         <div className="col-md-6 col-lg-6 col-xl-6 my-3 text-start">
                             <h4>Zones de services</h4>
@@ -54,7 +59,7 @@ function Home() {
                             <div>
                                 <ul>
                                     <li>Boucherville,</li>
-                                    <li>Longueuil</li>
+                                    <li>Longueuil,</li>
                                     <li>Varenes,</li>
                                     <li>Saint julie</li>
                                 </ul>

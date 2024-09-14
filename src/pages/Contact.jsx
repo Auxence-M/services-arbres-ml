@@ -1,8 +1,9 @@
 import { useState } from "react";
-import PageImage from "../PageImage";
+import PageImage from "../components/PageImage";
 import { httpsCallable, getFunctions } from "firebase/functions";
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
+import BackToTopButtton from "../components/BackToTopButton";
 
 function Contact() {
 
@@ -82,7 +83,7 @@ function Contact() {
 
     return (
         <div className="contact">
-
+            <BackToTopButtton></BackToTopButtton>
             <PageImage style={contactImageStyle} title={"Comment nous contacter"}></PageImage>  
 
             <div className="container-fluid">

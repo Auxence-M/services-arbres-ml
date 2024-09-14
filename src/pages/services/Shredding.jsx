@@ -1,4 +1,5 @@
-import PageImage from "../PageImage";
+import BackToTopButtton from "../../components/BackToTopButton";
+import PageImage from "../../components/PageImage";
 
 function Shredding() {
 
@@ -8,6 +9,7 @@ function Shredding() {
 
     return(
         <div className="shredding-service">
+            <BackToTopButtton></BackToTopButtton>
             <PageImage style={shreddingImageStyle} title={"Homme au sol"}></PageImage>
 
             <div className="container-fluid mt-3">

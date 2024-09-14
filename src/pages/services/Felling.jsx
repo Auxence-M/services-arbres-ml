@@ -1,4 +1,5 @@
-import PageImage from "../PageImage";
+import BackToTopButtton from "../../components/BackToTopButton";;
+import PageImage from "../../components/PageImage";
 
 function Felling() {
 
@@ -7,6 +8,7 @@ function Felling() {
     }
     return(
         <div className="felling-service">
+            <BackToTopButtton></BackToTopButtton>
             <PageImage style={fellingImageStyle} title={"Abattage"}></PageImage>
 
             <div className="container-fluid mt-3">

@@ -1,14 +1,16 @@
-import PageImage from "../PageImage";
+import BackToTopButtton from "../../components/BackToTopButton";
+import PageImage from "../../components/PageImage";
 
-function HedgeTrimming() {
+function Pruning() {
 
-    const hedgeTrimmingImageStyle = {
-        backgroundImage: `url("/src/assets/images/hedge-trimming-img.jpg")`
+    const pruningImageStyle = {
+        backgroundImage: `url("/src/assets/images/pruning-img.jpg")`
     }
-    
+
     return(
-        <div className="service-hedge-trimming">
-            <PageImage style={hedgeTrimmingImageStyle} title={"Taille de haies"}></PageImage>
+        <div className="service-pruning">
+            <BackToTopButtton></BackToTopButtton>
+            <PageImage style={pruningImageStyle} title={"Élagage"}></PageImage>
 
             <div className="container-fluid mt-3">
                 <section>
@@ -25,7 +27,9 @@ function HedgeTrimming() {
                 </section>
             </div>
         </div>
+
+        
     );
 }
 
-export default HedgeTrimming;
+export default Pruning
