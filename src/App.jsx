@@ -7,11 +7,10 @@ import Home from './pages/Home';
 import ErrorPage from './pages/Error';
 import About from './pages/About';
 import Contact from "./pages/Contact";
-import Felling from "./pages/Felling";
-import Shredding from "./pages/Shredding";
-import Pruning from "./pages/Pruning";
-import Realisations from "./pages/Realisations";
-import HedgeTrimming from "./pages/HedgeTrimming";
+import Felling from "./pages/services/Felling";
+import Shredding from "./pages/services/Shredding";
+import Pruning from "./pages/services/Pruning";
+import HedgeTrimming from "./pages/services/HedgeTrimming";
 
 import { initializeApp } from "firebase/app";
 import { getFunctions } from "firebase/functions";
@@ -37,7 +36,6 @@ const router  = createBrowserRouter(
     <Route path="/" element={<Root></Root>}>
       <Route index element={<Home></Home>}></Route>
       <Route path="acceuil" element={<Home></Home>}></Route>
-      <Route path="nos-réalisations" element={<Realisations></Realisations>}></Route>
       <Route path="contactez-nous" element={<Contact></Contact>}></Route>
       <Route path="a-propos" element={<About></About>}></Route>
       <Route path="services">

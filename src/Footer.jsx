@@ -8,7 +8,7 @@ function Footer() {
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <img src="/src/assets/images/logo-footer.png" alt="logo" width="100" height="100"/>
                                 <p className="my-0 mb-2">
-                                    Services d'entretien d'arbres dans la rive-sud de Montréal.
+                                    Services d'entretien d'arbres sur la rive-sud de Montréal.
                                 </p>
                             </div>
 

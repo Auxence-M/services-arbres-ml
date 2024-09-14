@@ -43,6 +43,10 @@ main {
   border-radius: 50rem;
 }
 
+.back-to-top {
+  color: green;
+}
+
 .form-submit-button:disabled {
   background-color: #4A993A;
 }
