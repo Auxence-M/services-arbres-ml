@@ -1,15 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   --primary: #73B665;
   --secondary: #A4D39B;
   --main: #CCE6C7;
+  --text: #333333;
+  --accent: #C76A3D;
 }
 
-main {
+* {
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+.home,
+.contact,
+.card {
+  background-color: var(--main);
+  color: var(--text);
+}
+
+.form-control {
+  padding: 10px 15px;
+  background-color: var(--main);
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.form-control:focus {
+  background-color: transparent;
+  color: var(--text);
+} 
+
+.form-label {
+  font-weight: bold;
+}
+
+.text-paragraph {
+  text-align: justify;
+}
+
+.contact-card {
   text-align: center;
 }
 
@@ -36,27 +67,51 @@ main {
   background-color: var(--main);
 }
 
-.form-submit-button {
+.btn-form-submit {
+  color: black;
   background-color: var(--primary);
-  transition: all .2s;
+  border-color: var(--primary);
   font-size: larger;
-  border-radius: 50rem;
 }
 
-.back-to-top {
-  color: green;
+.btn-form-submit:focus {
+  box-shadow: rgb(49, 132, 253);
 }
 
-.form-submit-button:disabled {
-  background-color: #4A993A;
+.btn-form-submit:hover {
+  color: black;
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
 
-.form-submit-button:hover {
-  background-color: #4A993A;
+.btn-form-submit:disabled {
+  color: black;
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
+
+.back-to-top-button {
+  color: var(--accent);
+}
+
+.btn-estimate-req {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+.btn-estimate-req:hover {
+  color: var(--primary);
+  border-color: var(--text);
+  background-color: var(--text);
+}
+
 
 .tel-link:hover {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a {
@@ -68,6 +123,14 @@ a:hover {
   text-decoration: underline;
 }
 
+.nav-link:hover {
+  text-decoration: none;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
 .logo {
   transition: all .2s;
 }
@@ -77,14 +140,38 @@ a:hover {
 }
 
 
-@media only screen and (min-width: 992px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .card {
-    width: 40%;
+    width: 75%;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 992px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .card {
     width: 75%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card {
+    width: 70%;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 45%;
   }
 }

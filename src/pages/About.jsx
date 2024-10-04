@@ -1,5 +1,6 @@
 import BackToTopButtton from "../components/BackToTopButton";
 import PageImage from "../components/PageImage";
+import Container from 'react-bootstrap/Container';
 function About() {
 
     const aboutImageStyle = {
@@ -11,8 +12,9 @@ function About() {
             <BackToTopButtton></BackToTopButtton>
             <PageImage style={aboutImageStyle} title={"Qui sommes nous"}></PageImage>
             
-            <div className="container-fluid">
-            </div>
+            <Container fluid>
+
+            </Container>
         </div>
     );
 }

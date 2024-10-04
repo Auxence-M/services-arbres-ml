@@ -1,9 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import {useLocation } from "react-router-dom";
 import PageImage from "../components/PageImage";
 import { httpsCallable, getFunctions } from "firebase/functions";
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 import BackToTopButtton from "../components/BackToTopButton";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Spinner from 'react-bootstrap/Spinner';
 
 function Contact() {
 
@@ -14,7 +22,6 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
-    const [service, setService] = useState("");
     const [message, setMessage] = useState("");
 
     const [sendingMessage, setSendingMessage] = useState(false);
@@ -25,13 +32,20 @@ function Contact() {
     const functions = getFunctions();
     const sendMail = httpsCallable(functions, "sendMail");
 
+
+    // Scroll directly to form
+    const hash = useLocation();
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.hash.replace("#", ""));
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [hash]);
+
     function closeToast() {
         setShowToast(false);
-    }
-
-    function handleSelectChange(event) {
-        const selectValue = event.target.value;
-        setService(selectValue);
     }
 
     function handleSubmit(event) {
@@ -42,16 +56,15 @@ function Contact() {
             name: name,
             email: email,
             phoneNumber: phoneNumber,
-            service: service,
             message: message
         }).then((result) => {
-            // get success message from promise
+            // get success message from promise, for debbugging purposes
             const data = result.data;
-            const sanitizedMessage = data.message; // for debbugging purposes
+            const sanitizedMessage = data.message;
 
             // show failure message on a toast
             setToastVariation("success");
-            setResultMesage("Message envoyée.");
+            setResultMesage(sanitizedMessage);
             setSendingMessage(false); // switch submit button back to default
             setShowToast(true);
 
@@ -59,12 +72,11 @@ function Contact() {
             setName("");
             setEmail("");
             setPhoneNumber("");
-            setService("");
             setMessage("");
         }).catch((error) => {
-            // get error message from promise
-            const data = error.data;
-            const sanitizedMessage = data.message; // for debbugging purposes
+            // get error message from promise, for debbugging purposes
+            // const data = error.data;
+            // const sanitizedMessage = data.message;
  
             // show failure message on a toast
             setToastVariation("danger");
@@ -76,126 +88,123 @@ function Contact() {
             setName("");
             setEmail("");
             setPhoneNumber("");
-            setService("");
             setMessage("");
         });
     }
 
     return (
         <div className="contact">
-            <BackToTopButtton></BackToTopButtton>
             <PageImage style={contactImageStyle} title={"Comment nous contacter"}></PageImage>  
+            <Container fluid>
+                <Container className="text-center">
+                    <p className="fs-6 my-4">
+                        Vous pouvez nous contacter par courriel ou par téléphone.
+                        Vous pouvez aussi nous envoyer un message directement en remplissant le formulaire de contact ci-dessous.
+                        Nous éssayerons de vous repondre dans les plus bref délais. Merci
+                    </p>
+                </Container>
 
-            <div className="container-fluid">
-                <p className="fs-6 my-4">
-                    Vous pouvez nous contacter par courriel ou par téléphone. 
-                    Vous pouvez aussi nous envoyer un message directement en remplissant le formulaire de contact ci-dessous. 
-                    Nous éssayerons de vous repondre dans les plus bref délais. Merci
-                </p>
-                <div className="row justify-content-center">
-                    <div className="card border-0">
-                        <div className="card-body">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col">
-                                        <img src="/src/assets/icons/envelope.svg" alt="Envelope" width="25" height="25"/>
-                                        <h5 className="card-title mt-2 mb-0">Courriel:</h5>
-                                        <p className="card-text">
+                <Row className="justify-content-center">
+                    <Card className=" contact-card border-0">
+                        <Card.Body>
+                            <Container fluid>
+                                <Row>
+                                    <Col>
+                                        <img src="/src/assets/icons/envelope.svg" alt="envelope-icon" width="25" height="25" />
+                                        <Card.Title className="mt-2 mb-0">Courriel: </Card.Title>
+                                        <Card.Text>
                                             <a href="mailto: info@exemple.ca">info@arboml.ca</a>
-                                        </p>
-                                    </div>
-                                    <div className="col">
-                                        <img src="/src/assets/icons/telephone.svg" alt="Telephone" width="25" height="25"/>                               
-                                        <h5 className="card-title mt-2 mb-0">Téléphone:</h5>        
-                                        <p className="card-text">
+                                        </Card.Text>
+                                    </Col>
+                                    <Col>
+                                        <img src="/src/assets/icons/telephone.svg" alt="telephone-icon" width="25" height="25" />
+                                        <Card.Title className="mt-2 mb-0">Téléphone: </Card.Title>
+                                        <Card.Text>
                                             <a className="tel-link" href="tel: (438) 367-7747">(438) 367-7747</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                   
-                </div>
-                <div className="row pb-4 justify-content-center">
-                    <div className="card border-0 mt-5">
-                        <h5 className="card-title mb-3 mt-3">Envoyer nous un message</h5>
-                        <form onSubmit={handleSubmit}>
-                            <div className="form-floating mb-3">
-                                <input type="text" className="form-control"                                    
-                                    id="inputName" 
-                                    placeholder="Votre nom complet"
-                                    value={name} 
-                                    onChange={event => {setName(event.target.value)}} 
-                                    required>    
-                                </input>
-                                <label htmlFor="inputName" className="form-label">Nom Complet*</label>
-                            </div>
-                            <div className="form-floating mb-3">
-                                <input type="email" className="form-control"                                   
-                                    id="inputEmail" 
-                                    placeholder="Votre adresse courriel" 
+                                        </Card.Text>
+                                    </Col>
+                                </Row>
+                            </Container>
+                        </Card.Body>
+                    </Card>
+                </Row>
+
+                <Row className="justify-content-center pb-4" id="formulaire">
+                    <Card className="border-0 mt-5">
+                        <Card.Title className=" text-center mb-4 mt-4">Envoyer nous un message</Card.Title>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group className="mb-3" controlId="nameField">
+                                <Form.Label>Nom et Prénom*</Form.Label>
+                                <Form.Control
+                                    required
+                                    type="text"
+                                    value={name}
+                                    onChange={event => { setName(event.target.value) }}
+                                    placeholder="Nom complet"
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="emailField">
+                                <Form.Label >Courriel*</Form.Label>
+                                <Form.Control
+                                    required
+                                    type="email"
                                     value={email}
-                                    onChange={event => {setEmail(event.target.value)}} 
-                                    required>   
-                                </input>
-                                <label htmlFor="inputEmail" className="form-label">Courriel*</label>
-                            </div>
-                            <div className="form-floating mb-3">
-                                <input type="tel" className="form-control" 
-                                    id="inputPhoneNumber" 
-                                    placeholder="Votre numero de téléphone" 
+                                    onChange={event => { setEmail(event.target.value) }}
+                                    placeholder="Adresse courriel"
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="phoneField">
+                                <Form.Label>Téléphone*</Form.Label>
+                                <Form.Control
+                                    required
+                                    type="tel"
                                     value={phoneNumber}
-                                    onChange={event => {setPhoneNumber(event.target.value)}} 
-                                    required>
-                                </input>                                      
-                                <label htmlFor="inputPhoneNumber" className="form-label">Téléphone*</label>
-                            </div>
-                            <div className="form-floating mb-3">
-                                <select className="form-select" id="serviceSelect" defaultValue="" onChange={handleSelectChange} required>
-                                    <option value="">Choissisez un service</option>
-                                    <option value="Abattage">Abattage</option>
-                                    <option value="Élagage">Élagage</option>
-                                    <option value="Homme au sol">Homme au sol</option>
-                                    <option value="Taille de haies">Taille de haies</option>
-                                </select>
-                                <label htmlFor="floatingSelect">Type de services</label>
-                            </div>
-                            <div className="form-floating mb-3">
-                                <textarea className="form-control" 
-                                    id="messageTextarea"
-                                    placeholder="Laisser un message ici" 
+                                    onChange={event => { setPhoneNumber(event.target.value) }}
+                                    placeholder="Numero de téléphone"
+                                />                               
+                            </Form.Group>
+
+                            <Form.Group className="mb-3" controlId="messageField">
+                                <Form.Label>Message*</Form.Label>
+                                <Form.Control
+                                    required
+                                    as="textarea"
                                     value={message}
-                                    onChange={event => {setMessage(event.target.value)}} 
-                                    style={{height: "120px"}}
-                                    required>        
-                                </textarea>
-                                <label htmlFor="messageTextarea" className="form-label">Message*</label>
-                            </div>
-                            <div className="d-grid mb-3">
-                                <button type="submit" className="btn form-submit-button" hidden={sendingMessage}>
+                                    onChange={event => { setMessage(event.target.value) }}
+                                    placeholder="Description des travaux"
+                                    rows={6}
+                                />
+                            </Form.Group>
+
+                            <Form.Group className="d-grid mb-3" controlId="submitButton">
+                                <Button variant="form-submit" type="submit" hidden={sendingMessage}>
                                     <span>Envoyer</span>
-                                    <img className="ms-2" src="/src/assets/icons/arrow-right.svg" alt="arrow-send" height="25"/> 
-                                </button>
-                                <button type="button" className="btn form-submit-button" hidden={!sendingMessage} disabled>
-                                    <span className="spinner-border spinner-border-sm me-2"></span>
+                                    <img className="ms-2" src="/src/assets/icons/arrow-right.svg" alt="arrow-send" height="25" />
+                                </Button>
+                                <Button variant="form-submit" type="button" hidden={!sendingMessage} disabled>
+                                    <Spinner as="span" animation="border" size="sm" className="me-2"></Spinner>
                                     <span>Envoi en cours...</span>
-                                </button>                               
-                            </div>
-                            <ToastContainer position="middle-center" style={{zIndex: 1}}>
+                                </Button>
+                            </Form.Group>
+                            
+                            <ToastContainer position="middle-center" style={{ zIndex: 1 }}>
                                 <Toast onClose={closeToast} show={showToast} bg={toastVariation} delay={3000} autohide>
                                     <Toast.Header>
-                                        <img src="/src/assets/images/logo.png" className="rounded me-2" alt="logo" width="20" height="20"/>
+                                        <img src="/src/assets/images/logo.png" className="rounded me-2" alt="logo" width="20" height="20" />
                                         <strong className="me-auto">ARBOML</strong>
                                     </Toast.Header>
                                     <Toast.Body>
-                                        {resultMessage}                          
+                                        {resultMessage}
                                     </Toast.Body>
                                 </Toast>
-                            </ToastContainer>                           
-                        </form>
-                    </div>   
-                </div>                                         
-            </div>                                 
+                            </ToastContainer>
+                        </Form>
+                    </Card>
+                </Row>
+            </Container> 
+            <BackToTopButtton></BackToTopButtton>                                
         </div>
     );
 }

@@ -35,14 +35,13 @@ const router  = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root></Root>}>
       <Route index element={<Home></Home>}></Route>
-      <Route path="acceuil" element={<Home></Home>}></Route>
       <Route path="contactez-nous" element={<Contact></Contact>}></Route>
       <Route path="a-propos" element={<About></About>}></Route>
       <Route path="services">
         <Route path="abattage" element={<Felling></Felling>}></Route>
         <Route path="homme-au-sol" element={<Shredding></Shredding>}></Route>
-        <Route path="élagage" element={<Pruning></Pruning>}></Route>
-        <Route path="taillage-de-haies" element={<HedgeTrimming></HedgeTrimming>}></Route>
+        <Route path="elagage" element={<Pruning></Pruning>}></Route>
+        <Route path="taille-de-haies" element={<HedgeTrimming></HedgeTrimming>}></Route>
       </Route>
       <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
     </Route>
