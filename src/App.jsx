@@ -7,13 +7,10 @@ import Home from './pages/Home';
 import ErrorPage from './pages/Error';
 import About from './pages/About';
 import Contact from "./pages/Contact";
-import Felling from "./pages/services/Felling";
-import Shredding from "./pages/services/Shredding";
-import Pruning from "./pages/services/Pruning";
-import HedgeTrimming from "./pages/services/HedgeTrimming";
 
 import { initializeApp } from "firebase/app";
 import { getFunctions } from "firebase/functions";
+import Services from "./pages/services";
 
 // Firebase cloud functions init
 const firebaseConfig = {
@@ -37,12 +34,7 @@ const router  = createBrowserRouter(
       <Route index element={<Home></Home>}></Route>
       <Route path="contactez-nous" element={<Contact></Contact>}></Route>
       <Route path="a-propos" element={<About></About>}></Route>
-      <Route path="services">
-        <Route path="abattage" element={<Felling></Felling>}></Route>
-        <Route path="homme-au-sol" element={<Shredding></Shredding>}></Route>
-        <Route path="elagage" element={<Pruning></Pruning>}></Route>
-        <Route path="taille-de-haies" element={<HedgeTrimming></HedgeTrimming>}></Route>
-      </Route>
+      <Route path="services" element={<Services></Services>}></Route>
       <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
     </Route>
   )

@@ -47,15 +47,7 @@ function OffCanvasNavbar({activePath}) {
                         <Offcanvas.Body>
                             <Nav className="me-auto">
                                 <Nav.Link active={activePath == "/"} href="/">Acceuil</Nav.Link>
-                                <Dropdown as={NavItem} id="offcanvasNavbarDropdown">
-                                    <Dropdown.Toggle as={NavLink}>Nos services</Dropdown.Toggle>
-                                    <Dropdown.Menu className="secondary-color">
-                                        <Dropdown.Item href="/services/abattage">Abattage</Dropdown.Item>
-                                        <Dropdown.Item href="/services/elagage">Élagage</Dropdown.Item>
-                                        <Dropdown.Item href="/services/homme-au-sol">Homme au sol</Dropdown.Item>
-                                        <Dropdown.Item href="/services/taille-de-haies">Taille de haies</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                </Dropdown>
+                                <Nav.Link active={activePath.startsWith("/services")} href="/services">Nos Services</Nav.Link> 
                                 <Nav.Link active={activePath.startsWith("/contactez-nous")} href="/contactez-nous">Contactez-nous</Nav.Link>
                                 <Nav.Link active={activePath == "/a-propos"} href="/a-propos">A Propos</Nav.Link>                               
                             </Nav>

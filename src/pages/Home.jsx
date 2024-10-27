@@ -30,10 +30,10 @@ function Home() {
             <Container fluid>
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
-                        <Col md={6} lg={6} xl={6} className="my-3 text-start">
+                        <Col md={6} lg={6} xl={6} className="text-start">
                             <h4>Services d'entretien d'arbres sur la rive-sud de Montréal</h4>
                             <p className="text-paragraph my-3">
-                                ArboML offres des services d'entretien d'arbres (élagage, abattage, taillage, etc.) sur la rive-sud de Montréal.
+                                ArboML offres des services d'entretien d'arbres (élagage, abattage, haies de cèdres, etc.) sur la rive-sud de Montréal.
                                 Vous pouvez nous contacter par courriel ou nous appeler en utilisant les informations affichées sur notre page de contact.
                                 Lorsque vous nous contactez, nous devons d'abord effectuer une évaluation afin de pouvoir vous faire une estimée.
                                 L'évaluation pour l'estimée est offerte gratuitement. N'hésitez pas à <a className="fw-bold" href="/contactez-nous" style={{ color: "#73B665" }}>nous contacter</a> si vous avez plus de questions. 
@@ -55,7 +55,7 @@ function Home() {
                             <Image fluid src={zonesImageSrc} alt="zones-img" />
                         </Col>
 
-                        <Col md={6} lg={6} xl={6} className="my-3 text-start">
+                        <Col md={6} lg={6} xl={6} className="text-start">
                             <h4>Zones de services</h4>
                             <p className="my-3">
                                 Nous desservons nos services dans plusieurs régions sur la rive-sud de Montréal.
@@ -77,7 +77,7 @@ function Home() {
 
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
-                        <Col md={6} lg={6} xl={6} className="my-3 text-start">
+                        <Col md={6} lg={6} xl={6} className="text-start">
                             <h4>Heures d'ouvertures</h4>
                             <p className="my-3">
                                 Veuillez noter que les heures d'ouverture suivantes sont flexibles et peuvent changer ou varier. Merci.

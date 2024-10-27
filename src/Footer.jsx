@@ -9,8 +9,8 @@ function Footer() {
                 <Container className="p-3">
                     <section>
                         <Row>
-                            <Col md={3} lg={3} xl={3} className="mx-auto mt-3">
-                                <img src="/src/assets/images/logo-footer.png" alt="logo" width="100" height="100" />
+                            <Col md={5} lg={4} xl={4} className="mx-auto mt-3">
+                                <img src="/src/assets/images/logo.png" alt="logo" width="100" height="100" />
                                 <p className="my-0 mb-2">
                                     Services d'entretien d'arbres sur la rive-sud de Montréal.
                                 </p>
@@ -36,7 +36,7 @@ function Footer() {
 
                             <hr className="w-100 clearfix d-md-none" />
 
-                            <Col md={4} lg={3} xl={3} className="mx-auto mt-3">
+                            <Col md={3} lg={3} xl={3} className="mx-auto mt-3">
                                 <h6 className="text-uppercase mb-3 fw-bold">Contact</h6>
                                 <p className="my-0">
                                     <img className="me-2" src="/src/assets/icons/envelope.svg" alt="Envelope" />

@@ -94,7 +94,7 @@ function Contact() {
 
     return (
         <div className="contact">
-            <PageImage style={contactImageStyle} title={"Comment nous contacter"}></PageImage>  
+            <PageImage style={contactImageStyle} title={"Comment Nous Contacter"}></PageImage>  
             <Container fluid>
                 <Container className="text-center">
                     <p className="fs-6 my-4">
@@ -104,7 +104,7 @@ function Contact() {
                     </p>
                 </Container>
 
-                <Row className="justify-content-center">
+                <Row className="justify-content-center" id="contact">
                     <Card className=" contact-card border-0">
                         <Card.Body>
                             <Container fluid>
@@ -188,7 +188,7 @@ function Contact() {
                                     <span>Envoi en cours...</span>
                                 </Button>
                             </Form.Group>
-                            
+
                             <ToastContainer position="middle-center" style={{ zIndex: 1 }}>
                                 <Toast onClose={closeToast} show={showToast} bg={toastVariation} delay={3000} autohide>
                                     <Toast.Header>
