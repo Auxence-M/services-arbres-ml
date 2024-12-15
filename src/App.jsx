@@ -4,13 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Root from "./layouts/Root";
 import Home from './pages/Home';
-import ErrorPage from './pages/Error';
+import NotFound from "./pages/NotFound";
 import About from './pages/About';
 import Contact from "./pages/Contact";
+import Services from "./pages/services";
 
 import { initializeApp } from "firebase/app";
 import { getFunctions } from "firebase/functions";
-import Services from "./pages/services";
 
 // Firebase cloud functions init
 const firebaseConfig = {
@@ -35,7 +35,7 @@ const router  = createBrowserRouter(
       <Route path="contactez-nous" element={<Contact></Contact>}></Route>
       <Route path="a-propos" element={<About></About>}></Route>
       <Route path="services" element={<Services></Services>}></Route>
-      <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
+      <Route path="*" element={<NotFound></NotFound>}></Route>
     </Route>
   )
 );

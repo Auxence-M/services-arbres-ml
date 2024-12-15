@@ -21,16 +21,19 @@ function Footer() {
                             <Col md={3} lg={2} xl={2} className="mx-auto mt-3">
                                 <h6 className="text-uppercase mb-3 fw-bold">Services</h6>
                                 <p className="my-0">
-                                    <a href="/services/abattage">Abattage</a>
+                                    <a href="/services/#abattage">Abattage</a>
                                 </p>
                                 <p className="my-2">
-                                    <a href="/services/élagage">Élagage</a>
+                                    <a href="/services/#elagage">Élagage</a>
                                 </p>
                                 <p className="my-2">
-                                    <a href="/services/homme-au-sol">Homme au sol</a>
+                                    <a href="/services/#homme-au-sol">Homme au sol</a>
                                 </p>
                                 <p className="my-2">
-                                    <a href="/services/taille-de-haies">Taille de haies</a>
+                                    <a href="/services/#plantation-arbres">Plantation d'arbres</a>
+                                </p>
+                                <p className="my-2">
+                                    <a href="/services/#haie-de-cedres">Haie de cèdres</a>
                                 </p>
                             </Col>
 

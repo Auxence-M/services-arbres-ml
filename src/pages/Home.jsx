@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import BackToTopButtton from "../components/BackToTopButton";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
@@ -13,6 +14,10 @@ function Home() {
     const summaryImageSrc = "/src/assets/images/summary-img.jpg"
     const zonesImageSrc = "/src/assets/images/zones-img.jpg"
     const hoursImageSrc = "/src/assets/images/hours-img.jpg"
+
+    useEffect(() => {
+        document.title = "Acceuil | ARBOML "
+    }, []);
     
     // TODO: improve contact form email check pattern
     // Cross-Site Scripting on mail form 

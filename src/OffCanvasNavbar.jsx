@@ -1,10 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Dropdown from 'react-bootstrap/Dropdown'
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import NavItem from 'react-bootstrap/NavItem';
-import NavLink from 'react-bootstrap/NavLink';
 import Button from 'react-bootstrap/Button';
 import { useNavigate} from "react-router-dom";
 import { useState } from 'react';
@@ -24,7 +21,7 @@ function OffCanvasNavbar({activePath}) {
     const navigate = useNavigate();
     function redirectToForm() {
         hideOffCanvas();
-        navigate("/contactez-nous/#formulaire");
+        navigate("/contactez-nous/#soumission");
     }
     
     return(

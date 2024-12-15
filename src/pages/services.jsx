@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -15,6 +17,18 @@ function Services() {
     const pruningImageSrc = "/src/assets/images/pruning-img.jpg"
     const shreddingImageSrc = "/src/assets/images/shredding-img.jpg"
     const hedgeImageSrc = "/src/assets/images/hedge-img.jpg"
+    const plantingImageSrc = "/src/assets/images/about-img.jpg"
+
+    const hash = useLocation();
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.hash.replace("#", ""));
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+        document.title = "Nos services | ARBOML "
+    }, []);
 
     return(
         <div className="services">
@@ -75,11 +89,21 @@ function Services() {
                                 </a>
                             </div>
                         </Col>
+                        <Col className="d-flex justify-content-center align-items-center text-center">
+                            <div>
+                                <img src="/src/assets/images/plant-icon.png" alt="logo" width="100" height="100" />
+                                <h5>Plantation d'arbres</h5>
+                                <a className="icon-link" href="#planting">
+                                    En savoir plus
+                                    <img src="/src/assets/icons/chevron-right.svg" alt="Telephone" />
+                                </a>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
 
                 <Container fluid>
-                    <Container fluid className="py-4" id="felling">
+                    <Container fluid className="py-4" id="abattage">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Abbatage</h4>
@@ -96,13 +120,6 @@ function Services() {
                                     Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
                                     Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis. 
                                     Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
-                                    <br></br>
-                                    <br></br>
-                                    Suspendisse id ex vel arcu consequat tempus. In et sagittis risus. In sit amet libero finibus, tristique nunc id, viverra ipsum. Maecenas vitae aliquam augue. 
-                                    Phasellus scelerisque, arcu et hendrerit semper, ex orci scelerisque tellus, a faucibus ipsum arcu in ligula. 
-                                    Nullam luctus arcu id massa cursus, id tincidunt mi elementum. Cras et turpis in odio sodales lacinia. 
-                                    Mauris ut mi placerat, pulvinar sem non, condimentum ligula. 
-                                    Nam erat turpis, consectetur vel ullamcorper id, mattis ut ipsum.
                                 </p>
                             </Col>
 
@@ -114,7 +131,7 @@ function Services() {
 
                     <hr></hr>
 
-                    <Container fluid className="py-4" id="pruning">
+                    <Container fluid className="py-4" id="elagage">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={5} xl={5} className="my-3">
                                 <Image fluid src={pruningImageSrc} alt="intro-img" />
@@ -135,13 +152,6 @@ function Services() {
                                     Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
                                     Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
                                     Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
-                                    <br></br>
-                                    <br></br>
-                                    Suspendisse id ex vel arcu consequat tempus. In et sagittis risus. In sit amet libero finibus, tristique nunc id, viverra ipsum. Maecenas vitae aliquam augue.
-                                    Phasellus scelerisque, arcu et hendrerit semper, ex orci scelerisque tellus, a faucibus ipsum arcu in ligula.
-                                    Nullam luctus arcu id massa cursus, id tincidunt mi elementum. Cras et turpis in odio sodales lacinia.
-                                    Mauris ut mi placerat, pulvinar sem non, condimentum ligula.
-                                    Nam erat turpis, consectetur vel ullamcorper id, mattis ut ipsum.
                                 </p>
                             </Col>
                         </Row>
@@ -149,42 +159,7 @@ function Services() {
 
                     <hr></hr>
 
-                    <Container fluid className="py-4" id="hedge-trimming">
-                        <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={6} className="text-start">
-                                <h4>Haie de cèdres</h4>
-                                <p className="text-paragraph my-3">
-                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
-                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
-                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
-                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
-                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
-                                    <br></br>
-                                    <br></br>
-                                    Proin quis molestie mauris. Etiam scelerisque lectus nisi, ut fringilla turpis tincidunt quis.
-                                    Phasellus semper nibh ac semper vestibulum. Integer luctus metus non euismod molestie.
-                                    Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
-                                    Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
-                                    Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
-                                    <br></br>
-                                    <br></br>
-                                    Suspendisse id ex vel arcu consequat tempus. In et sagittis risus. In sit amet libero finibus, tristique nunc id, viverra ipsum. Maecenas vitae aliquam augue.
-                                    Phasellus scelerisque, arcu et hendrerit semper, ex orci scelerisque tellus, a faucibus ipsum arcu in ligula.
-                                    Nullam luctus arcu id massa cursus, id tincidunt mi elementum. Cras et turpis in odio sodales lacinia.
-                                    Mauris ut mi placerat, pulvinar sem non, condimentum ligula.
-                                    Nam erat turpis, consectetur vel ullamcorper id, mattis ut ipsum.
-                                </p>
-                            </Col>
-
-                            <Col md={6} lg={5} xl={5} className="my-3">
-                                <Image fluid src={hedgeImageSrc} alt="intro-img" />
-                            </Col>
-                        </Row>
-                    </Container>
-
-                    <hr></hr>
-
-                    <Container fluid className="py-4" id="shredding">
+                    <Container fluid className="py-4" id="homme-au-sol">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={5} xl={5} className="my-3">
                                 <Image fluid src={shreddingImageSrc} alt="intro-img" />
@@ -205,14 +180,63 @@ function Services() {
                                     Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
                                     Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
                                     Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
-                                    <br></br>
-                                    <br></br>
-                                    Suspendisse id ex vel arcu consequat tempus. In et sagittis risus. In sit amet libero finibus, tristique nunc id, viverra ipsum. Maecenas vitae aliquam augue.
-                                    Phasellus scelerisque, arcu et hendrerit semper, ex orci scelerisque tellus, a faucibus ipsum arcu in ligula.
-                                    Nullam luctus arcu id massa cursus, id tincidunt mi elementum. Cras et turpis in odio sodales lacinia.
-                                    Mauris ut mi placerat, pulvinar sem non, condimentum ligula.
-                                    Nam erat turpis, consectetur vel ullamcorper id, mattis ut ipsum.
                                 </p>
+                            </Col>
+                        </Row>
+                    </Container>
+
+                    <hr></hr>
+
+                    <Container fluid className="py-4" id="plantation-arbres">
+                        <Row className="justify-content-center align-items-center">
+                            <Col md={6} lg={5} xl={5} className="my-3">
+                                <Image fluid src={plantingImageSrc} alt="intro-img" />
+                            </Col>
+
+                            <Col md={6} lg={6} xl={6} className="text-start">
+                                <h4>Plantation d'arbres</h4>
+                                <p className="text-paragraph my-3">
+                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
+                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
+                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
+                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
+                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
+                                    <br></br>
+                                    <br></br>
+                                    Proin quis molestie mauris. Etiam scelerisque lectus nisi, ut fringilla turpis tincidunt quis.
+                                    Phasellus semper nibh ac semper vestibulum. Integer luctus metus non euismod molestie.
+                                    Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
+                                    Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
+                                    Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
+                                </p>
+                            </Col>
+                        </Row>
+                    </Container>
+
+                    <hr></hr>
+
+                    <Container fluid className="py-4" id="haie-de-cedres">
+                        <Row className="justify-content-center align-items-center">
+                            <Col md={6} lg={6} xl={6} className="text-start">
+                                <h4>Haie de cèdres</h4>
+                                <p className="text-paragraph my-3">
+                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
+                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
+                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
+                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
+                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
+                                    <br></br>
+                                    <br></br>
+                                    Proin quis molestie mauris. Etiam scelerisque lectus nisi, ut fringilla turpis tincidunt quis.
+                                    Phasellus semper nibh ac semper vestibulum. Integer luctus metus non euismod molestie.
+                                    Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
+                                    Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
+                                    Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
+                                </p>
+                            </Col>
+
+                            <Col md={6} lg={5} xl={5} className="my-3">
+                                <Image fluid src={hedgeImageSrc} alt="intro-img" />
                             </Col>
                         </Row>
                     </Container>

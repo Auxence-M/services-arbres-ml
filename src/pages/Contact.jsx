@@ -42,6 +42,7 @@ function Contact() {
                 element.scrollIntoView({ behavior: "smooth" });
             }
         }
+        document.title = "Contactez-nous | ARBOML "
     }, [hash]);
 
     function closeToast() {
@@ -129,7 +130,7 @@ function Contact() {
                     </Card>
                 </Row>
 
-                <Row className="justify-content-center pb-4" id="formulaire">
+                <Row className="justify-content-center pb-4" id="soumission">
                     <Card className="border-0 mt-5">
                         <Card.Title className=" text-center mb-4 mt-4">Envoyer nous un message</Card.Title>
                         <Form onSubmit={handleSubmit}>

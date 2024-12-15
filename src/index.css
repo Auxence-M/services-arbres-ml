@@ -35,6 +35,7 @@
 .home,
 .contact,
 .services,
+.not-found,
 .card {
   background-color: var(--main);
   color: var(--text);
@@ -79,6 +80,7 @@
   background-color: var(--primary);
   border-color: var(--primary);
   font-size: larger;
+  border-radius: 4px;
 }
 
 .btn-form-submit:focus {
@@ -101,6 +103,7 @@
 .btn-estimate-req {
   color: var(--text);
   border-color: var(--text);
+  border-radius: 4px;
 }
 
 .btn-estimate-req:hover {
@@ -113,7 +116,6 @@
 .back-to-top-button {
   color: var(--accent);
 }
-
 
 .tel-link:hover {
   text-decoration: none;
@@ -140,6 +142,11 @@ a:hover {
 
 .nav-link.active {
   font-weight: bold;
+}
+
+/* error page */
+.not-found {
+  height: 80vh;
 }
 
 /* logo */
