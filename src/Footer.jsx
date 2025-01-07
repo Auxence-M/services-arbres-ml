@@ -27,14 +27,14 @@ function Footer() {
                                     <a href="/services/#elagage">Élagage</a>
                                 </p>
                                 <p className="my-2">
+                                    <a href="/services/#haie-de-cedres">Haie de cèdres</a>
+                                </p>
+                                <p className="my-2">
                                     <a href="/services/#homme-au-sol">Homme au sol</a>
                                 </p>
                                 <p className="my-2">
                                     <a href="/services/#plantation-arbres">Plantation d'arbres</a>
-                                </p>
-                                <p className="my-2">
-                                    <a href="/services/#haie-de-cedres">Haie de cèdres</a>
-                                </p>
+                                </p>                               
                             </Col>
 
                             <hr className="w-100 clearfix d-md-none" />
@@ -60,7 +60,9 @@ function Footer() {
                         2024 Copyright: ArboML. Tout droits réservés.
                     </div>
                 </div>
+                
             </footer>
+
         </div>
         
     );

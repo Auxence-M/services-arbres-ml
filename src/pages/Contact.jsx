@@ -34,16 +34,16 @@ function Contact() {
 
 
     // Scroll directly to form
-    const hash = useLocation();
+    const location = useLocation();
     useEffect(() => {
-        if (hash) {
-            const element = document.getElementById(hash.hash.replace("#", ""));
+        if (location) {
+            const element = document.getElementById(location.hash.replace("#", ""));
             if (element) {
                 element.scrollIntoView({ behavior: "smooth" });
             }
         }
         document.title = "Contactez-nous | ARBOML "
-    }, [hash]);
+    }, [location]);
 
     function closeToast() {
         setShowToast(false);
@@ -204,9 +204,13 @@ function Contact() {
                         </Form>
                     </Card>
                 </Row>
+                
             </Container> 
-            <BackToTopButtton></BackToTopButtton>                                
+
+            <BackToTopButtton></BackToTopButtton> 
+
         </div>
+
     );
 }
 

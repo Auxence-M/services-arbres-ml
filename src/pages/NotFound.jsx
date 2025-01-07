@@ -27,9 +27,12 @@ function NotFound() {
                     <h4>Désolé, une erreur inattendue s'est produite.</h4>
                     <Button size="lg" variant="form-submit" onClick={redirectToHome} className="text-uppercase">Retour à l'accueil</Button>
                 </Container>
+                
             </Container>
         </div>
+
     );
+
 }
 
 export default NotFound;

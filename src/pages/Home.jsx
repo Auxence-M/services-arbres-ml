@@ -23,7 +23,9 @@ function Home() {
     // Cross-Site Scripting on mail form 
     return (
         <div className="home">
-            <BackToTopButtton></BackToTopButtton>         
+
+            <BackToTopButtton></BackToTopButtton>   
+                  
             <Container fluid className="d-flex page-image justify-content-center align-items-center" style={homeImageStyle}>
                 <div className="text-center">
                     <h1>ArboML</h1>
@@ -32,6 +34,7 @@ function Home() {
                     </h4>
                 </div>
             </Container>
+
             <Container fluid>
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
@@ -101,9 +104,13 @@ function Home() {
                         </Col>
                     </Row>
                 </Container>
+
             </Container>
+
         </div>
+
     );
+    
 }
 
 export default Home;

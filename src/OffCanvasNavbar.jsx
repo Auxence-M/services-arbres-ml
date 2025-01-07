@@ -51,10 +51,15 @@ function OffCanvasNavbar({activePath}) {
                             <Button variant="estimate-req" className="me-2" onClick={redirectToForm}>Soumission Gratuite</Button>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
+                    
                 </Container>
+                
             </Navbar>
+
         </header>
+
     );
+
 }
 
 export default OffCanvasNavbar;
