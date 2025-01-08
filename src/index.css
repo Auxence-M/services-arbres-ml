@@ -135,6 +135,19 @@ a:hover {
   text-decoration: underline;
 }
 
+/* footer*/
+.footer-collapse-title {
+  cursor: pointer;
+}
+
+.footer-collapse-chevron {
+  transition: transform .3s ease-in-out ;
+}
+
+#opened .footer-collapse-chevron {
+  transform: rotate(-180deg);
+}
+
 /* nav links */
 .nav-link:hover {
   text-decoration: none;
@@ -151,7 +164,7 @@ a:hover {
 
 /* logo */
 .logo {
-  transition: all .2s;
+  transition: transform .3s ease-in-out;
 }
 
 .logo:hover {

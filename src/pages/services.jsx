@@ -34,7 +34,7 @@ function Services() {
 
     return(
         <div className="services">
-            
+
             <BackToTopButtton></BackToTopButtton>
 
             <PageImage style={serviceImageStyle} title={"Nos Services"}></PageImage> 
@@ -59,7 +59,7 @@ function Services() {
                                 <h5>Abbatage</h5>
                                 <a className="icon-link" href="#abattage"> 
                                     En savoir plus 
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="Telephone" />
+                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
                                 </a>
                             </div>
                         </Col>
@@ -69,7 +69,7 @@ function Services() {
                                 <h5>Élagage</h5>
                                 <a className="icon-link" href="#elagage">
                                     En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="Telephone" />
+                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
                                 </a>
                             </div>
                         </Col>
@@ -79,7 +79,7 @@ function Services() {
                                 <h5>Haie de cèdres</h5>
                                 <a className="icon-link" href="#haie-de-cedres">
                                     En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="Telephone" />
+                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
                                 </a>
                             </div> 
                         </Col>
@@ -89,7 +89,7 @@ function Services() {
                                 <h5>Homme au sol</h5>
                                 <a className="icon-link" href="#homme-au-sol">
                                     En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="Telephone" />
+                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
                                 </a>
                             </div>
                         </Col>
@@ -99,7 +99,7 @@ function Services() {
                                 <h5>Plantation d'arbres</h5>
                                 <a className="icon-link" href="#plantation-arbres">
                                     En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="Telephone" />
+                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
                                 </a>
                             </div>
                         </Col>
