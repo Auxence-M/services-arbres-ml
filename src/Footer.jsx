@@ -43,7 +43,7 @@ function Footer() {
                                 </p>
                             </Col>
 
-                            <hr className="w-100 d-lg-none my-0"></hr>
+                            <hr className="w-100 d-lg-none my-0"/>
 
                             <Col lg={3} xl={2} className="mx-auto">                               
                                 <p className="footer-collapse-title fw-bold d-flex justify-content-between d-lg-none my-0 py-3"
@@ -75,7 +75,7 @@ function Footer() {
                                 </Collapse>                               
                             </Col>
 
-                            <hr className="w-100 d-lg-none my-0"></hr>
+                            <hr className="w-100 d-lg-none my-0"/>
 
                             <Col lg={3} xl={2} className="mx-auto">
                                 <p className="footer-collapse-title fw-bold d-flex justify-content-between d-lg-none my-0 py-3"

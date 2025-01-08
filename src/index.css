@@ -41,6 +41,10 @@
   color: var(--text);
 }
 
+.service-description {
+  scroll-margin-top: 5rem;
+}
+
 /* contact form style */
 .form-control {
   padding: 10px 15px;

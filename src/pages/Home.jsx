@@ -40,7 +40,7 @@ function Home() {
                     <Row className="justify-content-center align-items-center">
                         <Col md={6} lg={6} xl={6} className="text-start">
                             <h4>Services d'entretien d'arbres sur la rive-sud de Montréal</h4>
-                            <p className="text-paragraph my-3">
+                            <p className="text-paragraph py-3">
                                 ArboML offres des services d'entretien d'arbres (élagage, abattage, haies de cèdres, etc.) sur la rive-sud de Montréal.
                                 Vous pouvez nous contacter par courriel ou nous appeler en utilisant les informations affichées sur notre page de contact.
                                 Lorsque vous nous contactez, nous devons d'abord effectuer une évaluation afin de pouvoir vous faire une estimée.
@@ -49,7 +49,7 @@ function Home() {
                             </p>
                         </Col>
 
-                        <Col md={6} lg={5} xl={5} className="my-3">
+                        <Col md={6} lg={5} xl={5} className="py-3">
                             <Image fluid src={summaryImageSrc} alt="intro-img"/>
                         </Col>
                     </Row>
@@ -59,13 +59,13 @@ function Home() {
 
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
-                        <Col md={6} lg={5} xl={5} className="my-3">
+                        <Col md={6} lg={5} xl={5} className="py-3">
                             <Image fluid src={zonesImageSrc} alt="zones-img" />
                         </Col>
 
                         <Col md={6} lg={6} xl={6} className="text-start">
                             <h4>Zones de services</h4>
-                            <p className="my-3">
+                            <p className="text-paragraph py-3">
                                 Nous desservons nos services dans plusieurs régions sur la rive-sud de Montréal.
                                 Vous trouverez ci-dessous une liste exhaustive de toutes les régions que nous couvrons.
                             </p>
@@ -87,7 +87,7 @@ function Home() {
                     <Row className="justify-content-center align-items-center">
                         <Col md={6} lg={6} xl={6} className="text-start">
                             <h4>Heures d'ouvertures</h4>
-                            <p className="my-3">
+                            <p className="text-paragraph py-3">
                                 Veuillez noter que les heures d'ouverture suivantes sont flexibles et peuvent changer ou varier. Merci.
                             </p>
                             <div>
@@ -99,7 +99,7 @@ function Home() {
                             </div>
                         </Col>
                         
-                        <Col md={6} lg={5} xl={5} className="my-3">
+                        <Col md={6} lg={5} xl={5} className="py-3">
                             <Image fluid src={hoursImageSrc} alt="heures-ouverture" />
                         </Col>
                     </Row>

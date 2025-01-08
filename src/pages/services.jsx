@@ -41,7 +41,7 @@ function Services() {
 
             <Container fluid>
                 <Container fluid className="text-center">
-                    <p className="fs-6 my-4">
+                    <p className="text-paragraph fs-6 my-4">
                         Nous offrons différents services d'arboriculture à nos clients. 
                         Afin que vous puissiez nous faire confiance, nous essayerons de vous fournir le meilleur service possible. 
                         Nous pourrions aussi vous donner des conseils sur la santé de vos arbres si vous le souhaitez. 
@@ -107,11 +107,11 @@ function Services() {
                 </Container>
 
                 <Container fluid>
-                    <Container fluid className="py-4" id="abattage">
+                    <Container fluid className="service-description py-4" id="abattage">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Abbatage</h4>
-                                <p className="text-paragraph my-3">
+                                <p className="text-paragraph py-3">
                                     Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare. 
                                     Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat. 
                                     Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada. 
@@ -120,23 +120,23 @@ function Services() {
                                 </p>
                             </Col>
 
-                            <Col md={6} lg={6} xl={5} className="my-3">
-                                <Image fluid src={fellingImageSrc} alt="intro-img" />
+                            <Col md={6} lg={6} xl={5} className="py-3">
+                                <Image fluid src={fellingImageSrc} alt="felling-img" />
                             </Col>
                         </Row>
                     </Container>
 
-                    <hr></hr>
+                    <hr/>
 
-                    <Container fluid className="py-4" id="elagage">
+                    <Container fluid className="service-description py-4"  id="elagage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="my-3">
-                                <Image fluid src={pruningImageSrc} alt="intro-img" />
+                            <Col md={6} lg={6} xl={5} className="py-3">
+                                <Image fluid src={pruningImageSrc} alt="pruning-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Élagage</h4>
-                                <p className="text-paragraph my-3">
+                                <p className="text-paragraph py-3">
                                     Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
                                     Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
                                     Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
@@ -154,13 +154,13 @@ function Services() {
                         </Row>
                     </Container>
 
-                    <hr></hr>
+                    <hr/>
 
-                    <Container fluid className="py-4" id="haie-de-cedres">
+                    <Container fluid className="service-description py-4" id="haie-de-cedres">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Haie de cèdres</h4>
-                                <p className="text-paragraph my-3">
+                                <p className="text-paragraph py-3">
                                     Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
                                     Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
                                     Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
@@ -169,23 +169,23 @@ function Services() {
                                 </p>
                             </Col>
 
-                            <Col md={6} lg={6} xl={5} className="my-3">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={hedgeImageSrc} alt="intro-img" />
                             </Col>
                         </Row>
                     </Container>
 
-                    <hr></hr>
+                    <hr/>
 
-                    <Container fluid className="py-4" id="homme-au-sol">
+                    <Container fluid className="service-description py-4" id="homme-au-sol">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="my-3">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={shreddingImageSrc} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Homme au sol</h4>
-                                <p className="text-paragraph my-3">
+                                <p className="text-paragraph py-3">
                                     Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
                                     Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
                                     Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
@@ -203,13 +203,13 @@ function Services() {
                         </Row>
                     </Container>
 
-                    <hr></hr>
+                    <hr/>
 
-                    <Container fluid className="py-4" id="plantation-arbres">
+                    <Container fluid className="service-description py-4" id="plantation-arbres">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Plantation d'arbres</h4>
-                                <p className="text-paragraph my-3">
+                                <p className="text-paragraph py-3">
                                     Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
                                     Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
                                     Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
@@ -218,7 +218,7 @@ function Services() {
                                 </p>
                             </Col>
 
-                            <Col md={6} lg={6} xl={5} className="my-3">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={plantingImageSrc} alt="intro-img" />
                             </Col>
                         </Row>
