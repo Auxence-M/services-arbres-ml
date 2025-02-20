@@ -34,14 +34,12 @@ function Services() {
 
     return(
         <div className="services">
-
             <BackToTopButtton></BackToTopButtton>
-
             <PageImage style={serviceImageStyle} title={"Nos Services"}></PageImage> 
 
             <Container fluid>
                 <Container fluid className="text-center">
-                    <p className="text-paragraph fs-6 my-4">
+                    <p className=" fs-6 my-4">
                         Nous offrons différents services d'arboriculture à nos clients. 
                         Afin que vous puissiez nous faire confiance, nous essayerons de vous fournir le meilleur service possible. 
                         Nous pourrions aussi vous donner des conseils sur la santé de vos arbres si vous le souhaitez. 
@@ -52,76 +50,92 @@ function Services() {
                 </Container>
 
                 <Container fluid className="py-5">
-                    <Row >
+                    <Row>
                         <Col className="d-flex justify-content-center align-items-center text-center">
-                            <div>
-                                <img src="/src/assets/images/felling-icon.png" alt="logo" width="100" height="100" />
-                                <h5>Abbatage</h5>
-                                <a className="icon-link" href="#abattage"> 
-                                    En savoir plus 
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
-                                </a>
-                            </div>
+                            <a className="icon-link" href="#abattage">
+                                <div>
+                                    <img src="/src/assets/images/felling-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Abbatage</h5>
+                                </div>
+                            </a>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center text-center">
-                            <div>
-                                <img src="/src/assets/images/pruning-icon.png" alt="logo" width="100" height="100" />
-                                <h5>Élagage</h5>
-                                <a className="icon-link" href="#elagage">
-                                    En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
-                                </a>
-                            </div>
+                            <a className="icon-link" href="#elagage">
+                                <div>
+                                    <img src="/src/assets/images/pruning-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Élagage</h5>
+                                </div>
+                            </a>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center text-center">
-                            <div>
-                                <img src="/src/assets/images/hedge-icon.png" alt="logo" width="100" height="100" />
-                                <h5>Haie de cèdres</h5>
-                                <a className="icon-link" href="#haie-de-cedres">
-                                    En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
-                                </a>
-                            </div> 
+                            <a className="icon-link" href="#haie-de-cedres">
+                                <div>
+                                    <img src="/src/assets/images/hedge-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Haie de cèdres</h5>
+                                </div>
+                            </a>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center text-center">
-                            <div>
-                                <img src="/src/assets/images/lumber-icon.png" alt="logo" width="100" height="100" />
-                                <h5>Homme au sol</h5>
-                                <a className="icon-link" href="#homme-au-sol">
-                                    En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
-                                </a>
-                            </div>
+                            <a className="icon-link" href="#haubanage">
+                                <div>
+                                    <img src="/src/assets/images/bracing-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Haubanage</h5>
+                                </div>
+                            </a>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="d-flex justify-content-center align-items-center text-center">
+                            <a className="icon-link" href="#plantation-arbres-et-arbustes">
+                                <div>
+                                    <img src="/src/assets/images/planting-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Plantations d’arbres et arbustes</h5>
+                                </div>
+                            </a>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center text-center">
-                            <div>
-                                <img src="/src/assets/images/plant-icon.png" alt="logo" width="100" height="100" />
-                                <h5>Plantation d'arbres</h5>
-                                <a className="icon-link" href="#plantation-arbres">
-                                    En savoir plus
-                                    <img src="/src/assets/icons/chevron-right.svg" alt="chevron-right" />
-                                </a>
-                            </div>
+                            <a className="icon-link" href="#fertilisation-decompactions-sol">
+                                <div>
+                                    <img src="/src/assets/images/enrich-soil-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Fertilisation et décompactions de sol</h5>
+                                </div>
+                            </a>
+                        </Col>
+                        <Col className="d-flex justify-content-center align-items-center text-center">
+                            <a className="icon-link" href="#traitement-de-plaies">
+                                <div>
+                                    <img src="/src/assets/images/wounded-tree-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Traitement de plaies</h5>
+                                </div>
+                            </a>
+                        </Col>
+                        <Col className="d-flex justify-content-center align-items-center text-center">
+                            <a className="icon-link" href="#diagnostic">
+                                <div>
+                                    <img src="/src/assets/images/diagnostic-icon.png" alt="logo" width="100" height="100" />
+                                    <h5>Diagnostic</h5>
+                                </div>
+                            </a>
                         </Col>
                     </Row>
                 </Container>
 
+                
                 <Container fluid>
                     <Container fluid className="service-description py-4" id="abattage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={6} className="text-start">
-                                <h4>Abbatage</h4>
-                                <p className="text-paragraph py-3">
-                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare. 
-                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat. 
-                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada. 
-                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est. 
-                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.                                    
-                                </p>
+                            <Col md={6} lg={6} xl={5} className="py-3 order-2">
+                                <Image fluid src={fellingImageSrc} alt="felling-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={5} className="py-3">
-                                <Image fluid src={fellingImageSrc} alt="felling-img" />
+                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                                <h4>Abbatage</h4>
+                                <p className="text-paragraph py-3">
+                                    Lorsque nécessaire, nous sommes en mesure d’effectuer l’abattage de tout arbre.
+                                    <br></br>
+                                    <br></br>
+                                    Un permis est parfois exigé par les municipalités
+                                </p>
                             </Col>
                         </Row>
                     </Container>
@@ -130,25 +144,18 @@ function Services() {
 
                     <Container fluid className="service-description py-4"  id="elagage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3">
+                            <Col md={6} lg={6} xl={5} className="py-3 order-1">
                                 <Image fluid src={pruningImageSrc} alt="pruning-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start">
+                            <Col md={6} lg={6} xl={6} className="text-start order-2">
                                 <h4>Élagage</h4>
                                 <p className="text-paragraph py-3">
-                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
-                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
-                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
-                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
-                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
+                                    Nous offrons un service professionnel effectué par un élagueur diplômé selon les plus hauts standards de l’industrie.
                                     <br></br>
                                     <br></br>
-                                    Proin quis molestie mauris. Etiam scelerisque lectus nisi, ut fringilla turpis tincidunt quis.
-                                    Phasellus semper nibh ac semper vestibulum. Integer luctus metus non euismod molestie.
-                                    Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
-                                    Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
-                                    Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
+                                    Nous utilisons les bonnes techniques de coupe afin de maintenir la santé structurelle de vos arbres
+
                                 </p>
                             </Col>
                         </Row>
@@ -158,46 +165,71 @@ function Services() {
 
                     <Container fluid className="service-description py-4" id="haie-de-cedres">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={6} className="text-start">
-                                <h4>Haie de cèdres</h4>
-                                <p className="text-paragraph py-3">
-                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
-                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
-                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
-                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
-                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
-                                </p>
+                            <Col md={6} lg={6} xl={5} className="py-3  order-2">
+                                <Image fluid src={hedgeImageSrc} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={5} className="py-3">
-                                <Image fluid src={hedgeImageSrc} alt="intro-img" />
+                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                                <h4>Haie de cèdres</h4>
+                                <p className="text-paragraph py-3">
+                                    Nous offrons un service professionnel de taille de haie effectué par un élagueur diplômé.
+                                </p>
                             </Col>
                         </Row>
                     </Container>
 
-                    <hr/>
+                    <hr />
 
-                    <Container fluid className="service-description py-4" id="homme-au-sol">
+                    <Container fluid className="service-description py-4" id="haubanage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3">
+                            <Col md={6} lg={6} xl={5} className="py-3  order-1">
                                 <Image fluid src={shreddingImageSrc} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start">
-                                <h4>Homme au sol</h4>
+                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                                <h4>Haubanage</h4>
                                 <p className="text-paragraph py-3">
-                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
-                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
-                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
-                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
-                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
+                                    Nous offrons le service d’haubanage pour consolider et renforcer la structure de vos arbres lorsque requis.
+                                </p>
+                            </Col>
+                        </Row>
+                    </Container>
+
+                    <hr />
+
+                    <Container fluid className="service-description py-4" id="plantation-arbres-et-arbustes">
+                        <Row className="justify-content-center align-items-center">
+                            <Col md={6} lg={6} xl={5} className="py-3  order-2">
+                                <Image fluid src={plantingImageSrc} alt="intro-img" />
+                            </Col>
+
+                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                                <h4>Plantations d’arbres et arbustes</h4>
+                                <p className="text-paragraph py-3">
+                                    Que ce soit pour faire de l’ombre, embellir, ou favoriser l’intimité, la plantation d’arbres et arbustes est une solution à envisager. Ils améliorent la qualité de l’air et rendent les milieux de vie plus sain et plus conviviaux.
                                     <br></br>
                                     <br></br>
-                                    Proin quis molestie mauris. Etiam scelerisque lectus nisi, ut fringilla turpis tincidunt quis.
-                                    Phasellus semper nibh ac semper vestibulum. Integer luctus metus non euismod molestie.
-                                    Fusce molestie ipsum eget sapien hendrerit ultricies. Maecenas interdum sit amet lorem eu rutrum.
-                                    Nulla in lacinia tellus. Vestibulum eleifend mi felis, at dignissim metus varius mollis.
-                                    Fusce accumsan venenatis nibh, vitae ultrices nibh imperdiet quis.
+                                    Nous pouvons vous aider à choisir la bonne essence d’arbre ou d’arbuste à planter selon l’endroit.
+                                    <br></br>
+                                    <br></br>
+                                    Nous offrons le service complet de plantation.
+                                </p>
+                            </Col>
+                        </Row>
+                    </Container>
+
+                    <hr />
+
+                    <Container fluid className="service-description py-4" id="fertilisation-decompactions-sol">
+                        <Row className="justify-content-center align-items-center">
+                            <Col md={6} lg={6} xl={5} className="py-3 order-1">
+                                <Image fluid src={shreddingImageSrc} alt="intro-img" />
+                            </Col>
+
+                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                                <h4>Fertilisation et décompactions de sol</h4>
+                                <p className="text-paragraph py-3">
+                                    Nous offrons un service de fertilisation adapté au besoin de vos arbres et arbustes.
                                 </p>
                             </Col>
                         </Row>
@@ -205,25 +237,40 @@ function Services() {
 
                     <hr/>
 
-                    <Container fluid className="service-description py-4" id="plantation-arbres">
+                    <Container fluid className="service-description py-4" id="traitement-de-plaies">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={6} className="text-start">
-                                <h4>Plantation d'arbres</h4>
-                                <p className="text-paragraph py-3">
-                                    Vivamus vitae tempor felis. Nam dignissim ligula dui, ut faucibus massa lacinia vel. Aenean volutpat lacus quis urna congue ornare.
-                                    Integer ipsum nibh, pellentesque sed vulputate vel, ultricies sollicitudin eros. Donec tellus felis, mattis vel arcu vitae, vehicula feugiat erat.
-                                    Phasellus non tellus nisi. Donec vel fringilla nulla. Cras quis enim molestie libero suscipit lobortis in id enim. Sed eleifend ac mi ac malesuada.
-                                    Phasellus tristique placerat sapien venenatis condimentum. Nulla viverra bibendum turpis at tincidunt. Etiam quis felis est.
-                                    Quisque vel ultrices nisl. Aliquam a felis in odio mattis imperdiet eget ac nunc. Mauris maximus a arcu eu posuere. Pellentesque nec porttitor odio.
-                                </p>
+                            <Col md={6} lg={6} xl={5} className="py-3 order-2">
+                                <Image fluid src={shreddingImageSrc} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={5} className="py-3">
-                                <Image fluid src={plantingImageSrc} alt="intro-img" />
+                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                                <h4>Traitement de plaies </h4>
+                                <p className="text-paragraph py-3">
+                                    Parfois des blessures se forment sur le tronc et les branches des arbres.
+                                    Il est alors nécessaire de les traiter afin de prévenir l’infestation d’insectes ou de champignons pouvant mettre en danger leur santé structurelle.
+                                </p>
                             </Col>
                         </Row>
                     </Container>
-    
+
+                    <hr />
+
+                    <Container fluid className="service-description py-4" id="diagnostic">
+                        <Row className="justify-content-center align-items-center">
+                            <Col md={6} lg={6} xl={5} className="py-3 order-1">
+                                <Image fluid src={plantingImageSrc} alt="intro-img" />
+                            </Col>
+
+                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                                <h4>Diagnostic</h4>
+                                <p className="text-paragraph py-3">
+                                    Si vous croyez qu’un de vos arbres ou arbustes à un problème (maladies ou insectes),
+                                    nous sommes en mesure de vous fournir un diagnostic et de vous suggérer les traitements appropriés.
+                                </p>
+                            </Col>
+                        </Row>
+                    </Container>
+
                 </Container>
 
             </Container>

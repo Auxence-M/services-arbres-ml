@@ -38,7 +38,11 @@ function Home() {
             <Container fluid>
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
-                        <Col md={6} lg={6} xl={6} className="text-start">
+                        <Col md={6} lg={5} xl={5} className="py-3 order-2">
+                            <Image fluid src={summaryImageSrc} alt="intro-img" />
+                        </Col>
+
+                        <Col md={6} lg={6} xl={6} className="text-start order-1">
                             <h4>Services d'entretien d'arbres sur la rive-sud de Montréal</h4>
                             <p className="text-paragraph py-3">
                                 ArboML offres des services d'entretien d'arbres (élagage, abattage, haies de cèdres, etc.) sur la rive-sud de Montréal.
@@ -48,9 +52,30 @@ function Home() {
                                 Merci.
                             </p>
                         </Col>
+                    </Row>
+                </Container>
 
-                        <Col md={6} lg={5} xl={5} className="py-3">
-                            <Image fluid src={summaryImageSrc} alt="intro-img"/>
+                <hr></hr>
+
+                <Container fluid className="py-4">
+                    <Row className="justify-content-center align-items-center">
+                        <Col md={6} lg={5} xl={5} className="py-3 order-1">
+                            <Image fluid src={zonesImageSrc} alt="zones-img" />
+                        </Col>
+
+                        <Col md={6} lg={6} xl={6} className="text-start order-2">
+                            <h4>Pourquoi choisir ArboML ?</h4>
+                            <p className="text-paragraph py-3">
+                                <ul>
+                                    <li>Service d’arboriste, sur la Rive-Sud de Montréal toute l’année peu importe la saison;</li>
+                                    <li>Assurance responsabilité complète. Les travaux sont exécutés de manière sécuritaire avec une garantie en cas de dommages;</li>
+                                    <li>Travaux effectués selon les plus hauts standards de l’industrie par des professionnels diplômé;,</li>
+                                    <li>Professionnel, courtois, et à l’écoute de vos besoins, et ayant à cœur la santé de vos arbres et arbustes;</li>
+                                    <li>Formation continue afin de toujours vous offrir le meilleur service possible.;</li>
+                                    <li>Propreté des lieux à la fin des travaux.</li>
+                                </ul>
+                                Pour votre tranquillité et celle de vos voisins, nous utilisons principalement des outils électriques afin de réduire le bruit et la pollution.
+                            </p>
                         </Col>
                     </Row>
                 </Container>
@@ -59,11 +84,11 @@ function Home() {
 
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
-                        <Col md={6} lg={5} xl={5} className="py-3">
-                            <Image fluid src={zonesImageSrc} alt="zones-img" />
+                        <Col md={6} lg={5} xl={5} className="py-3 order-2">
+                            <Image fluid src={hoursImageSrc} alt="zones-img" />
                         </Col>
 
-                        <Col md={6} lg={6} xl={6} className="text-start">
+                        <Col md={6} lg={6} xl={6} className="text-start order-1">
                             <h4>Zones de services</h4>
                             <p className="text-paragraph py-3">
                                 Nous desservons nos services dans plusieurs régions sur la rive-sud de Montréal.
@@ -77,30 +102,6 @@ function Home() {
                                     <li>Saint julie</li>
                                 </ul>
                             </div>
-                        </Col>
-                    </Row>
-                </Container>
-
-                <hr></hr>
-
-                <Container fluid className="py-4">
-                    <Row className="justify-content-center align-items-center">
-                        <Col md={6} lg={6} xl={6} className="text-start">
-                            <h4>Heures d'ouvertures</h4>
-                            <p className="text-paragraph py-3">
-                                Veuillez noter que les heures d'ouverture suivantes sont flexibles et peuvent changer ou varier. Merci.
-                            </p>
-                            <div>
-                                <ul>
-                                    <li>Du Lundi au Vendredi, de 9h á 17h</li>
-                                    <li>Samedi et Dimache, de 10h à 17h</li>
-                                    <li>365 jours par année</li>
-                                </ul>
-                            </div>
-                        </Col>
-                        
-                        <Col md={6} lg={5} xl={5} className="py-3">
-                            <Image fluid src={hoursImageSrc} alt="heures-ouverture" />
                         </Col>
                     </Row>
                 </Container>

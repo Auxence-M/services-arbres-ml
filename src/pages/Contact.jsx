@@ -96,6 +96,7 @@ function Contact() {
     return (
         <div className="contact">
             <PageImage style={contactImageStyle} title={"Comment Nous Contacter"}></PageImage>  
+            
             <Container fluid>
                 <Container className="text-center">
                     <p className="fs-6 my-4">
@@ -121,7 +122,7 @@ function Contact() {
                                         <img src="/src/assets/icons/telephone.svg" alt="telephone-icon" width="25" height="25" />
                                         <Card.Title className="mt-2 mb-0">Téléphone: </Card.Title>
                                         <Card.Text>
-                                            <a className="tel-link" href="tel: (438) 367-7747">(438) 367-7747</a>
+                                            <a className="tel-link" href="tel: (514) 442-8299">(514) 442-8299</a>
                                         </Card.Text>
                                     </Col>
                                 </Row>

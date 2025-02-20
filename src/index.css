@@ -3,9 +3,10 @@
 :root {
   --primary: #73B665;
   --secondary: #A4D39B;
-  --main: #CCE6C7;
+  --main: #FFFFFF;
+  /* --main: #CCE6C7; */
   --text: #333333;
-  --accent: #C76A3D;
+  --accent: #297C18;
 }
 
 * {
@@ -88,7 +89,9 @@
 }
 
 .btn-form-submit:focus {
-  box-shadow: rgb(49, 132, 253);
+  color: black;
+    background-color: var(--primary);
+    border-color: var(--primary);
 }
 
 .btn-form-submit:hover {
@@ -159,6 +162,11 @@ a:hover {
 
 .nav-link.active {
   font-weight: bold;
+}
+
+/* icon link */
+.icon-link:hover {
+  text-decoration: none;
 }
 
 /* error page */

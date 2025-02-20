@@ -37,7 +37,8 @@ function Footer() {
                     <div>
                         <Row>
                             <Col lg={4} xl={4} className="mx-auto">
-                                <img className="mb-2" src="/src/assets/images/logo.png" alt="logo" width="100" height="100" />
+                                <img className="mb-2 d-md-none" src="/src/assets/images/logo.png" alt="logo" width="100" height="100" />
+                                <img className="mb-2 d-none d-md-block" src="/src/assets/images/logo.png" alt="logo" width="130" height="130" />
                                 <p>
                                     Services d'entretien d'arbres sur la rive-sud de Montréal.
                                 </p>
@@ -45,7 +46,7 @@ function Footer() {
 
                             <hr className="w-100 d-lg-none my-0"/>
 
-                            <Col lg={3} xl={2} className="mx-auto">                               
+                            <Col lg={3} xl={3} className="mx-auto">                               
                                 <p className="footer-collapse-title fw-bold d-flex justify-content-between d-lg-none my-0 py-3"
                                     id={serviceState} 
                                     onClick={toggleServiceCollapse}> 
@@ -56,21 +57,16 @@ function Footer() {
                                 <Collapse in={toggleService} className="d-lg-block">
                                     <div className="footer-collapse-content">
                                         <h6 className="fw-bold d-none d-lg-block">Services</h6>
-                                        <p className="my-0">
-                                            <a href="/services/#abattage">Abattage</a>
-                                        </p>
-                                        <p className="my-3 my-lg-2">
-                                            <a href="/services/#elagage">Élagage</a>
-                                        </p>
-                                        <p className="my-3 my-lg-2">
-                                            <a href="/services/#haie-de-cedres">Haie de cèdres</a>
-                                        </p>
-                                        <p className="my-3 my-lg-2">
-                                            <a href="/services/#homme-au-sol">Homme au sol</a>
-                                        </p>
-                                        <p className="my-3 my-lg-2">
-                                            <a href="/services/#plantation-arbres">Plantation d'arbres</a>
-                                        </p>
+                                        <ul className="nav flex-column">
+                                            <li className="nav-item mb-2"><a href="/services/#abattage" >Abattage</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#elagage" >Élagage</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#haie-de-cedres" >Haie de cèdres</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#haubanage" >Haubanage</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#plantation-arbres-et-arbustes" >Plantations d’arbres et arbustes</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#fertilisation-decompactions-sol" >Fertilisation et décompactions de sol</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#traitement-de-plaies" >Traitement de plaies</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#diagnostic" >Diagnostic</a></li>
+                                        </ul>
                                     </div>
                                 </Collapse>                               
                             </Col>
@@ -94,7 +90,7 @@ function Footer() {
                                         </p>
                                         <p className="my-3 my-lg-2">
                                             <img className="me-2" src="/src/assets/icons/telephone.svg" alt="Telephone" />
-                                            <a className="tel-link" href="tel: (438) 367-7747">(438) 367-7747</a>
+                                            <a className="tel-link" href="tel: (514) 442-8299">(514) 442-8299</a>
                                         </p>
                                     </div>
                                 </Collapse>
