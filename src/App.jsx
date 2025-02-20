@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Root from "./layouts/Root";
 import Home from './pages/Home';
 import NotFound from "./pages/NotFound";
-import About from './pages/About';
 import Contact from "./pages/Contact";
 import Services from "./pages/services";
 
@@ -33,7 +32,6 @@ const router  = createBrowserRouter(
     <Route path="/" element={<Root></Root>}>
       <Route index element={<Home></Home>}></Route>
       <Route path="contactez-nous" element={<Contact></Contact>}></Route>
-      <Route path="a-propos" element={<About></About>}></Route>
       <Route path="services" element={<Services></Services>}></Route>
       <Route path="*" element={<NotFound></NotFound>}></Route>
     </Route>
