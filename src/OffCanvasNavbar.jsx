@@ -49,7 +49,7 @@ function OffCanvasNavbar({activePath}) {
                                 <Nav.Link active={activePath.startsWith("/services")} href="/services">Nos Services</Nav.Link> 
                                 <Nav.Link active={activePath.startsWith("/contactez-nous")} href="/contactez-nous">Contactez-nous</Nav.Link>                            
                             </Nav>
-                            <Button variant="estimate-req" className="me-2" onClick={redirectToForm}>Soumission Gratuite</Button>
+                            <Button variant="estimate-req" className="me-2 mt-3 mt-lg-0" onClick={redirectToForm}>Soumission Gratuite</Button>
                         </Offcanvas.Body>
                     </Navbar.Offcanvas>
                     

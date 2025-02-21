@@ -8,8 +8,6 @@ import errorImage from "../assets/images/404.png"
 
 function NotFound() {
 
-    const errorImageSrc = "/src/assets/images/404.png"
-
     useEffect(() => {
         document.title = "Erreur 404 | ARBOML "
     }, []);
