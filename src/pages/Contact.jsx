@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {useLocation } from "react-router-dom";
-import PageImage from "../components/PageImage";
 import { httpsCallable, getFunctions } from "firebase/functions";
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
@@ -13,11 +12,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner';
 
-function Contact() {
+import logo from "../assets/images/logo.png"
 
-    const contactImageStyle = {
-        backgroundImage: `url("/src/assets/images/contact-img.jpg")`
-    }
+function Contact() {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -95,7 +92,13 @@ function Contact() {
 
     return (
         <div className="contact">
-            <PageImage style={contactImageStyle} title={"Comment Nous Contacter"}></PageImage>  
+            <Container fluid className="d-flex page-image justify-content-center align-items-center" id="contact-page-image">
+                <div className="text-center" >
+                    <div className="text-center">
+                        <h1>Comment Nous Contacter</h1>
+                    </div>
+                </div >
+            </Container>  
             
             <Container fluid>
                 <Container className="text-center">
@@ -112,14 +115,18 @@ function Contact() {
                             <Container fluid>
                                 <Row>
                                     <Col>
-                                        <img src="/src/assets/icons/envelope.svg" alt="envelope-icon" width="25" height="25" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                                        </svg>
                                         <Card.Title className="mt-2 mb-0">Courriel: </Card.Title>
                                         <Card.Text>
                                             <a href="mailto: info@exemple.ca">info@arboml.ca</a>
                                         </Card.Text>
                                     </Col>
                                     <Col>
-                                        <img src="/src/assets/icons/telephone.svg" alt="telephone-icon" width="25" height="25" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                        </svg>
                                         <Card.Title className="mt-2 mb-0">Téléphone: </Card.Title>
                                         <Card.Text>
                                             <a className="tel-link" href="tel: (514) 442-8299">(514) 442-8299</a>
@@ -183,7 +190,9 @@ function Contact() {
                             <Form.Group className="d-grid mb-3" controlId="submitButton">
                                 <Button variant="form-submit" type="submit" hidden={sendingMessage}>
                                     <span>Envoyer</span>
-                                    <img className="ms-2" src="/src/assets/icons/arrow-right.svg" alt="arrow-send" height="25" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-arrow-right ms-2" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                    </svg>
                                 </Button>
                                 <Button variant="form-submit" type="button" hidden={!sendingMessage} disabled>
                                     <Spinner as="span" animation="border" size="sm" className="me-2"></Spinner>
@@ -194,7 +203,7 @@ function Contact() {
                             <ToastContainer position="middle-center" style={{ zIndex: 1 }}>
                                 <Toast onClose={closeToast} show={showToast} bg={toastVariation} delay={3000} autohide>
                                     <Toast.Header>
-                                        <img src="/src/assets/images/logo.png" className="rounded me-2" alt="logo" width="20" height="20" />
+                                        <img src={logo} className="rounded me-2" alt="logo" width="20" height="20" />
                                         <strong className="me-auto">ARBOML</strong>
                                     </Toast.Header>
                                     <Toast.Body>

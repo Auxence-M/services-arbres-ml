@@ -67,12 +67,24 @@
 .contact-card {
   text-align: center;
 }
-
+ /* page image */
 .page-image {
   background-position: center;
   background-size: cover;
   min-height: 55vh;
   color: black;
+}
+
+#home-page-image {
+  background-image: url("./assets/images/home-img.jpg");
+}
+
+#services-page-image {
+  background-image: url("./assets/images/services-img.jpg");
+}
+
+#contact-page-image {
+  background-image: url("./assets/images/contact-img.jpg");
 }
 
 .modal-90w {

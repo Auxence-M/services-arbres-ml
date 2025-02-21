@@ -5,19 +5,26 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import BackToTopButtton from '../components/BackToTopButton';
 import Image from 'react-bootstrap/Image';
-import PageImage from '../components/PageImage';
+
+import fellingImage from "../assets/images/felling-img.jpg";
+import pruningImage from "../assets/images/pruning-img.jpg";
+import hedgeImage from "../assets/images/hedge-img.jpg";
+import bracingImage from "../assets/images/bracing-img.jpg";
+import plantingImage from "../assets/images/planting-img.jpg";
+import enrichingImage from "../assets/images/enriching-img.jpg";
+import sickTreatmentImage from "../assets/images/sick-tree-img.jpg";
+import diagnosticImage from "../assets/images/diagnostic-img.jpg";
+
+import fellingIcon from "../assets/images/felling-icon.png";
+import pruningIcon from "../assets/images/pruning-icon.png";
+import hedgeIcon from "../assets/images/hedge-icon.png";
+import bracingIcon from "../assets/images/bracing-icon.png";
+import plantingIcon from "../assets/images/planting-icon.png";
+import enrichingIcon from "../assets/images/enrich-soil-icon.png";
+import sickTreatmentIcon from "../assets/images/sick-tree-icon.png";
+import diagnosticIcon from "../assets/images/diagnostic-icon.png";
 
 function Services() {
-
-    const serviceImageStyle = {
-        backgroundImage: `url("/src/assets/images/services-img.jpg")`
-    }
-
-    const fellingImageSrc = "/src/assets/images/felling-img.jpg"
-    const pruningImageSrc = "/src/assets/images/pruning-img.jpg"
-    const shreddingImageSrc = "/src/assets/images/shredding-img.jpg"
-    const hedgeImageSrc = "/src/assets/images/hedge-img.jpg"
-    const plantingImageSrc = "/src/assets/images/about-img.jpg"
 
     const location = useLocation();
     useEffect(() => {
@@ -35,7 +42,14 @@ function Services() {
     return(
         <div className="services">
             <BackToTopButtton></BackToTopButtton>
-            <PageImage style={serviceImageStyle} title={"Nos Services"}></PageImage> 
+
+            <Container fluid className="d-flex page-image justify-content-center align-items-center" id="services-page-image">
+                <div className="text-center" >
+                    <div className="text-center">
+                        <h1>Nos Service</h1>
+                    </div>
+                </div >
+            </Container>
 
             <Container fluid>
                 <Container fluid className="text-center">
@@ -54,7 +68,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#abattage">
                                 <div>
-                                    <img src="/src/assets/images/felling-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={fellingIcon} alt="logo" width="100" height="100" />
                                     <h5>Abbatage</h5>
                                 </div>
                             </a>
@@ -62,7 +76,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#elagage">
                                 <div>
-                                    <img src="/src/assets/images/pruning-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={pruningIcon} alt="logo" width="100" height="100" />
                                     <h5>Élagage</h5>
                                 </div>
                             </a>
@@ -70,7 +84,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#haie-de-cedres">
                                 <div>
-                                    <img src="/src/assets/images/hedge-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={hedgeIcon} alt="logo" width="100" height="100" />
                                     <h5>Haie de cèdres</h5>
                                 </div>
                             </a>
@@ -78,7 +92,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#haubanage">
                                 <div>
-                                    <img src="/src/assets/images/bracing-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={bracingIcon} alt="logo" width="100" height="100" />
                                     <h5>Haubanage</h5>
                                 </div>
                             </a>
@@ -88,7 +102,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#plantation-arbres-et-arbustes">
                                 <div>
-                                    <img src="/src/assets/images/planting-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={plantingIcon} alt="logo" width="100" height="100" />
                                     <h5>Plantations d’arbres et arbustes</h5>
                                 </div>
                             </a>
@@ -96,7 +110,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#fertilisation-decompactions-sol">
                                 <div>
-                                    <img src="/src/assets/images/enrich-soil-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={enrichingIcon} alt="logo" width="100" height="100" />
                                     <h5>Fertilisation et décompactions de sol</h5>
                                 </div>
                             </a>
@@ -104,7 +118,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#traitement-de-plaies">
                                 <div>
-                                    <img src="/src/assets/images/wounded-tree-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={sickTreatmentIcon} alt="logo" width="100" height="100" />
                                     <h5>Traitement de plaies</h5>
                                 </div>
                             </a>
@@ -112,7 +126,7 @@ function Services() {
                         <Col className="d-flex justify-content-center align-items-center text-center">
                             <a className="icon-link" href="#diagnostic">
                                 <div>
-                                    <img src="/src/assets/images/diagnostic-icon.png" alt="logo" width="100" height="100" />
+                                    <img src={diagnosticIcon} alt="logo" width="100" height="100" />
                                     <h5>Diagnostic</h5>
                                 </div>
                             </a>
@@ -125,7 +139,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="abattage">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3 order-2">
-                                <Image fluid src={fellingImageSrc} alt="felling-img" />
+                                <Image fluid src={fellingImage} alt="felling-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-1">
@@ -145,7 +159,7 @@ function Services() {
                     <Container fluid className="service-description py-4"  id="elagage">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3 order-1">
-                                <Image fluid src={pruningImageSrc} alt="pruning-img" />
+                                <Image fluid src={pruningImage} alt="pruning-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-2">
@@ -166,7 +180,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="haie-de-cedres">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3  order-2">
-                                <Image fluid src={hedgeImageSrc} alt="intro-img" />
+                                <Image fluid src={hedgeImage} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-1">
@@ -183,7 +197,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="haubanage">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3  order-1">
-                                <Image fluid src={shreddingImageSrc} alt="intro-img" />
+                                <Image fluid src={bracingImage} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-2">
@@ -200,7 +214,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="plantation-arbres-et-arbustes">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3  order-2">
-                                <Image fluid src={plantingImageSrc} alt="intro-img" />
+                                <Image fluid src={plantingImage} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-1">
@@ -223,7 +237,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="fertilisation-decompactions-sol">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3 order-1">
-                                <Image fluid src={shreddingImageSrc} alt="intro-img" />
+                                <Image fluid src={enrichingImage} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-2">
@@ -240,7 +254,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="traitement-de-plaies">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3 order-2">
-                                <Image fluid src={shreddingImageSrc} alt="intro-img" />
+                                <Image fluid src={sickTreatmentImage} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-1">
@@ -258,7 +272,7 @@ function Services() {
                     <Container fluid className="service-description py-4" id="diagnostic">
                         <Row className="justify-content-center align-items-center">
                             <Col md={6} lg={6} xl={5} className="py-3 order-1">
-                                <Image fluid src={plantingImageSrc} alt="intro-img" />
+                                <Image fluid src={diagnosticImage} alt="intro-img" />
                             </Col>
 
                             <Col md={6} lg={6} xl={6} className="text-start order-2">

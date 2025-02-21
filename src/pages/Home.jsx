@@ -5,28 +5,23 @@ import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import summaryImage from "../assets/images/summary-img.jpg"
+import zonesImage from "../assets/images/zones-img.jpg"
+import hoursImage from "../assets/images/hours-img.jpg"
+
 function Home() {
-
-    const homeImageStyle = {
-        backgroundImage: `url("/src/assets/images/home-img.jpg")`
-    }
-
-    const summaryImageSrc = "/src/assets/images/summary-img.jpg"
-    const zonesImageSrc = "/src/assets/images/zones-img.jpg"
-    const hoursImageSrc = "/src/assets/images/hours-img.jpg"
 
     useEffect(() => {
         document.title = "Acceuil | ARBOML "
     }, []);
     
     // TODO: improve contact form email check pattern
-    // Cross-Site Scripting on mail form 
     return (
         <div className="home">
 
             <BackToTopButtton></BackToTopButtton>   
                   
-            <Container fluid className="d-flex page-image justify-content-center align-items-center" style={homeImageStyle}>
+            <Container fluid className="d-flex page-image justify-content-center align-items-center" id="home-page-image">
                 <div className="text-center">
                     <h1>ArboML</h1>
                     <h4 className="text-uppercase mb-3">
@@ -39,7 +34,7 @@ function Home() {
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
                         <Col md={6} lg={5} xl={5} className="py-3 order-2">
-                            <Image fluid src={summaryImageSrc} alt="intro-img" />
+                            <Image fluid src={summaryImage} alt="intro-img" />
                         </Col>
 
                         <Col md={6} lg={6} xl={6} className="text-start order-1">
@@ -60,22 +55,22 @@ function Home() {
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
                         <Col md={6} lg={5} xl={5} className="py-3 order-1">
-                            <Image fluid src={zonesImageSrc} alt="zones-img" />
+                            <Image fluid src={zonesImage} alt="zones-img" />
                         </Col>
 
                         <Col md={6} lg={6} xl={6} className="text-start order-2">
                             <h4>Pourquoi choisir ArboML ?</h4>
-                            <p className="text-paragraph py-3">
+                            <div className="text-paragraph py-3">
                                 <ul>
                                     <li>Service d’arboriste, sur la Rive-Sud de Montréal toute l’année peu importe la saison;</li>
                                     <li>Assurance responsabilité complète. Les travaux sont exécutés de manière sécuritaire avec une garantie en cas de dommages;</li>
-                                    <li>Travaux effectués selon les plus hauts standards de l’industrie par des professionnels diplômé;,</li>
+                                    <li>Travaux effectués selon les plus hauts standards de l’industrie par des professionnels diplômé;</li>
                                     <li>Professionnel, courtois, et à l’écoute de vos besoins, et ayant à cœur la santé de vos arbres et arbustes;</li>
                                     <li>Formation continue afin de toujours vous offrir le meilleur service possible.;</li>
                                     <li>Propreté des lieux à la fin des travaux.</li>
                                 </ul>
                                 Pour votre tranquillité et celle de vos voisins, nous utilisons principalement des outils électriques afin de réduire le bruit et la pollution.
-                            </p>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
@@ -85,7 +80,7 @@ function Home() {
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">
                         <Col md={6} lg={5} xl={5} className="py-3 order-2">
-                            <Image fluid src={hoursImageSrc} alt="zones-img" />
+                            <Image fluid src={hoursImage} alt="zones-img" />
                         </Col>
 
                         <Col md={6} lg={6} xl={6} className="text-start order-1">

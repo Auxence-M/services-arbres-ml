@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 import { useNavigate} from "react-router-dom";
 import { useState } from 'react';
 
+import logo from "./assets/images/logo.png"
+
 function OffCanvasNavbar({activePath}) {
 
     const[show, setShow] = useState(false);
@@ -29,7 +31,7 @@ function OffCanvasNavbar({activePath}) {
             <Navbar expand={"lg"} className="primary-color p-0">
                 <Container fluid>
                     <Navbar.Brand href="/">
-                        <img src="/src/assets/images/logo.png" className="logo" alt="logo" width="60" height="60" />
+                        <img src={logo} className="logo" alt="logo" width="60" height="60" />
                     </Navbar.Brand>
                     <Navbar.Toggle onClick={showOffCanvas} aria-controls="offcanvasNavbar" />
                     <Navbar.Offcanvas show={show} onHide={hideOffCanvas} id="offcanvasNavbar" className="primary-color" aria-labelledby="offcanvasNavbarLabel" placement="end">
