@@ -38,7 +38,7 @@ function OffCanvasNavbar({activePath}) {
                         <Offcanvas.Header closeButton>
                             <Offcanvas.Title id="offcanvasNavbarLabel">
                                 <a href="/">
-                                    <img src="/src/assets/images/logo.png" className="logo me-1" alt="logo" width="55" height="55" />
+                                    <img src={logo} className="logo me-1" alt="logo" width="55" height="55" />
                                 </a>
                                 ArboML
                             </Offcanvas.Title>

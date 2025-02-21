@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
 
+import errorImage from "../assets/images/404.png"
+
 function NotFound() {
 
     const errorImageSrc = "/src/assets/images/404.png"
@@ -21,7 +23,7 @@ function NotFound() {
         <div className="not-found d-flex align-items-center">
             <Container>
                 <Container className="d-flex justify-content-center">
-                    <Image fluid className="error-img" src={errorImageSrc} alt="404-img"></Image>
+                    <Image fluid className="error-img" src={errorImage} alt="404-img"></Image>
                 </Container>
                 <Container className="text-center py-4">
                     <h4>Désolé, une erreur inattendue s'est produite.</h4>
