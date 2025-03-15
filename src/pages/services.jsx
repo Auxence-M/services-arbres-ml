@@ -45,21 +45,16 @@ function Services() {
 
             <Container fluid className="d-flex page-image justify-content-center align-items-center" id="services-page-image">
                 <div className="text-center" >
-                    <div className="text-center">
-                        <h1>Nos Service</h1>
-                    </div>
+                    <h1>Nos Services</h1>
                 </div >
             </Container>
 
             <Container fluid>
                 <Container fluid className="text-center">
                     <p className=" fs-6 my-4">
-                        Nous offrons différents services d'arboriculture à nos clients. 
-                        Afin que vous puissiez nous faire confiance, nous essayerons de vous fournir le meilleur service possible. 
-                        Nous pourrions aussi vous donner des conseils sur la santé de vos arbres si vous le souhaitez. 
-                        Veuillez consulter ci-dessous les services que nous proposons avec une brève explication. 
-                        Si vous avez d'autres tâches liées aux arbres que nous n'avons pas répertoriées ci-dessous, 
-                        veuillez nous envoyer un e-mail et nous ferons de notre mieux pour répondre à vos besoins ou à vous diriger vers l'aide adéquate. Merci
+                        Nous offrons différents services d’arboriculture. Vous trouverez ci-dessous les services que nous offrons. 
+                        Veuillez nous contacter et nous ferons de notre mieux pour répondre à vos besoins.
+
                     </p>
                 </Container>
 
@@ -82,10 +77,10 @@ function Services() {
                             </a>
                         </Col>
                         <Col className="d-flex justify-content-center align-items-center text-center">
-                            <a className="icon-link" href="#haie-de-cedres">
+                            <a className="icon-link" href="#taille-de-haies">
                                 <div>
                                     <img src={hedgeIcon} alt="logo" width="100" height="100" />
-                                    <h5>Haie de cèdres</h5>
+                                    <h5>Taille de haies</h5>
                                 </div>
                             </a>
                         </Col>
@@ -138,17 +133,17 @@ function Services() {
                 <Container fluid>
                     <Container fluid className="service-description py-4" id="abattage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3 order-2">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={fellingImage} alt="felling-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                            <Col md={6} lg={6} xl={6} className="text-start order-md-first">
                                 <h4>Abbatage</h4>
                                 <p className="text-paragraph py-3">
                                     Lorsque nécessaire, nous sommes en mesure d’effectuer l’abattage de tout arbre.
                                     <br></br>
                                     <br></br>
-                                    Un permis est parfois exigé par les municipalités
+                                    Un permis est parfois exigé par les municipalités.
                                 </p>
                             </Col>
                         </Row>
@@ -158,17 +153,17 @@ function Services() {
 
                     <Container fluid className="service-description py-4"  id="elagage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3 order-1">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={pruningImage} alt="pruning-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                            <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Élagage</h4>
                                 <p className="text-paragraph py-3">
                                     Nous offrons un service professionnel effectué par un élagueur diplômé selon les plus hauts standards de l’industrie.
                                     <br></br>
                                     <br></br>
-                                    Nous utilisons les bonnes techniques de coupe afin de maintenir la santé structurelle de vos arbres
+                                    Nous utilisons les bonnes techniques de coupe afin de maintenir la santé structurelle de vos arbres.
 
                                 </p>
                             </Col>
@@ -177,16 +172,16 @@ function Services() {
 
                     <hr/>
 
-                    <Container fluid className="service-description py-4" id="haie-de-cedres">
+                    <Container fluid className="service-description py-4" id="taille-de-haies">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3  order-2">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={hedgeImage} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-1">
-                                <h4>Haie de cèdres</h4>
+                            <Col md={6} lg={6} xl={6} className="text-start order-md-first">
+                                <h4>Taille de Haies</h4>
                                 <p className="text-paragraph py-3">
-                                    Nous offrons un service professionnel de taille de haie effectué par un élagueur diplômé.
+                                    Nous offrons un service professionnel de taille de haies effectué par un élagueur diplômé.
                                 </p>
                             </Col>
                         </Row>
@@ -196,11 +191,11 @@ function Services() {
 
                     <Container fluid className="service-description py-4" id="haubanage">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3  order-1">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={bracingImage} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                            <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Haubanage</h4>
                                 <p className="text-paragraph py-3">
                                     Nous offrons le service d’haubanage pour consolider et renforcer la structure de vos arbres lorsque requis.
@@ -213,11 +208,11 @@ function Services() {
 
                     <Container fluid className="service-description py-4" id="plantation-arbres-et-arbustes">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3  order-2">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={plantingImage} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                            <Col md={6} lg={6} xl={6} className="text-start order-md-first">
                                 <h4>Plantations d’arbres et arbustes</h4>
                                 <p className="text-paragraph py-3">
                                     Que ce soit pour faire de l’ombre, embellir, ou favoriser l’intimité, la plantation d’arbres et arbustes est une solution à envisager. Ils améliorent la qualité de l’air et rendent les milieux de vie plus sain et plus conviviaux.
@@ -236,11 +231,11 @@ function Services() {
 
                     <Container fluid className="service-description py-4" id="fertilisation-decompactions-sol">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3 order-1">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={enrichingImage} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                            <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Fertilisation et décompactions de sol</h4>
                                 <p className="text-paragraph py-3">
                                     Nous offrons un service de fertilisation adapté au besoin de vos arbres et arbustes.
@@ -253,11 +248,11 @@ function Services() {
 
                     <Container fluid className="service-description py-4" id="traitement-de-plaies">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3 order-2">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={sickTreatmentImage} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-1">
+                            <Col md={6} lg={6} xl={6} className="text-start order-md-first">
                                 <h4>Traitement de plaies </h4>
                                 <p className="text-paragraph py-3">
                                     Parfois des blessures se forment sur le tronc et les branches des arbres.
@@ -271,11 +266,11 @@ function Services() {
 
                     <Container fluid className="service-description py-4" id="diagnostic">
                         <Row className="justify-content-center align-items-center">
-                            <Col md={6} lg={6} xl={5} className="py-3 order-1">
+                            <Col md={6} lg={6} xl={5} className="py-3">
                                 <Image fluid src={diagnosticImage} alt="intro-img" />
                             </Col>
 
-                            <Col md={6} lg={6} xl={6} className="text-start order-2">
+                            <Col md={6} lg={6} xl={6} className="text-start">
                                 <h4>Diagnostic</h4>
                                 <p className="text-paragraph py-3">
                                     Si vous croyez qu’un de vos arbres ou arbustes à un problème (maladies ou insectes),

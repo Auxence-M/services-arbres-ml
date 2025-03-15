@@ -94,18 +94,16 @@ function Contact() {
         <div className="contact">
             <Container fluid className="d-flex page-image justify-content-center align-items-center" id="contact-page-image">
                 <div className="text-center" >
-                    <div className="text-center">
-                        <h1>Comment Nous Contacter</h1>
-                    </div>
+                    <h1>Comment Nous Contacter</h1>
                 </div >
             </Container>  
             
             <Container fluid>
                 <Container className="text-center">
                     <p className="fs-6 my-4">
-                        Vous pouvez nous contacter par courriel ou par téléphone.
+                        Vous pouvez nous contacter par courriel, par téléphone ou par message texte.
                         Vous pouvez aussi nous envoyer un message directement en remplissant le formulaire de contact ci-dessous.
-                        Nous éssayerons de vous repondre dans les plus bref délais. Merci
+                        Nous éssayerons de vous répondre dans les plus bref délais. Merci
                     </p>
                 </Container>
 

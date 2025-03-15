@@ -46,7 +46,7 @@ function Footer() {
                                 <img className="mb-2 d-md-none" src={logo} alt="logo" width="100" height="100" />
                                 <img className="mb-2 d-none d-md-block" src={logo} alt="logo" width="130" height="130" />
                                 <p>
-                                    Services d'entretien d'arbres sur la rive-sud de Montréal.
+                                    Services d'entretien d'arbres et d'arbustes à Boucherville et sur la rive-Sud de Montréal.
                                 </p>
                             </Col>
 
@@ -68,7 +68,7 @@ function Footer() {
                                         <ul className="nav flex-column">
                                             <li className="nav-item mb-2"><a href="/services/#abattage" >Abattage</a></li>
                                             <li className="nav-item mb-2"><a href="/services/#elagage" >Élagage</a></li>
-                                            <li className="nav-item mb-2"><a href="/services/#haie-de-cedres" >Haie de cèdres</a></li>
+                                            <li className="nav-item mb-2"><a href="/services/#taille-de-haies" >Taille de Haies</a></li>
                                             <li className="nav-item mb-2"><a href="/services/#haubanage" >Haubanage</a></li>
                                             <li className="nav-item mb-2"><a href="/services/#plantation-arbres-et-arbustes" >Plantations d’arbres et arbustes</a></li>
                                             <li className="nav-item mb-2"><a href="/services/#fertilisation-decompactions-sol" >Fertilisation et décompactions de sol</a></li>
