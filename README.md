@@ -2,7 +2,18 @@
 
 ### How to run
 
-Make sure you have [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed on your computer then clone the repository and run the following
+Make sure you have [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed on your computer.
+
+Clone the repository
+```
+git clone https://github.com/Auxence-M/services-arbres-ml.git
+cd services-arbres-ml`
+```
+Install all the dependencies
+
+`nmp install`
+
+Run the following
 
 `npm run dev -- --host`
 
