@@ -45,7 +45,7 @@ function OffCanvasNavbar({activePath}) {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="me-auto">
-                                <Nav.Link active={activePath == "/"} href="/">Acceuil</Nav.Link>
+                                <Nav.Link active={activePath === "/"} href="/">Acceuil</Nav.Link>
                                 <Nav.Link active={activePath.startsWith("/services")} href="/services">Nos Services</Nav.Link> 
                                 <Nav.Link active={activePath.startsWith("/contactez-nous")} href="/contactez-nous">Contactez-nous</Nav.Link>                            
                             </Nav>

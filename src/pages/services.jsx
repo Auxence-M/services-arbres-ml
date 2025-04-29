@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import BackToTopButtton from '../components/BackToTopButton';
+import BackToTopButton from '../components/BackToTopButton';
 import Image from 'react-bootstrap/Image';
 
 import fellingImage from "../assets/images/felling-img.jpg";
@@ -41,7 +41,7 @@ function Services() {
 
     return(
         <div className="services">
-            <BackToTopButtton></BackToTopButtton>
+            <BackToTopButton></BackToTopButton>
 
             <Container fluid className="d-flex page-image justify-content-center align-items-center" id="services-page-image">
                 <div className="text-center" >
@@ -53,7 +53,7 @@ function Services() {
                 <Container fluid className="text-center">
                     <p className=" fs-6 my-4">
                         Nous offrons différents services d’arboriculture. Vous trouverez ci-dessous les services que nous offrons. 
-                        Veuillez nous contacter et nous ferons de notre mieux pour répondre à vos besoins.
+                        Veuillez nous contacter et nous ferons de notre mieux pour répondre à vos besoins.
 
                     </p>
                 </Container>

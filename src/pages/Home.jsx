@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import BackToTopButtton from "../components/BackToTopButton";
+import BackToTopButton from "../components/BackToTopButton";
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
@@ -18,7 +18,7 @@ function Home() {
     return (
         <div className="home">
 
-            <BackToTopButtton></BackToTopButtton>   
+            <BackToTopButton></BackToTopButton>
                   
             <Container fluid className="d-flex page-image justify-content-center align-items-center" id="home-page-image">
                 <div className="text-center">
@@ -53,7 +53,7 @@ function Home() {
                 <Container fluid className="py-4">
                     <Row className="justify-content-center align-items-center">                      
                         <Col md={6} lg={6} xl={6} className="text-start order-md-last">
-                            <h4>Pourquoi choisir ArboML ?</h4>
+                            <h4>Pourquoi choisir ArboML ?</h4>
                             <div className="text-paragraph py-3">
                                 <ul>
                                     <li>Service d’arboriste, sur la Rive-Sud de Montréal toute l’année;</li>

@@ -38,7 +38,7 @@ exports.sendMail = onRequest(async (req, res) => {
 
         };
 
-        //call the built in `sendMail` function and return different responses upon success and failure
+        //call the built-in `sendMail` function and return different responses upon success and failure
         return transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
                 return res.status(500).send({

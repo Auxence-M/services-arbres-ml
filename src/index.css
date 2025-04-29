@@ -4,7 +4,6 @@
   --primary: #73B665;
   --secondary: #A4D39B;
   --main: #FFFFFF;
-  /* --main: #CCE6C7; */
   --text: #333333;
   --accent: #297C18;
 }
@@ -14,7 +13,7 @@
   font-weight: 400;
 }
 
-/* backgorund colors */
+/* background colors */
 .primary-color {
   background-color: var(--primary);
 }
@@ -140,7 +139,7 @@
   text-decoration: none;
 }
 
-/* regaular a tags */
+/* regular a tags */
 a:hover {
   text-decoration: underline;
 }

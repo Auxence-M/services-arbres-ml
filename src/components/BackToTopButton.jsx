@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from 'react-bootstrap/Button';
 
-function BackToTopButtton () {
+function BackToTopButton () {
 
     const[visible, setVisible] = useState(false);
 
@@ -32,4 +32,4 @@ function BackToTopButtton () {
         </Button>
     );
 }
-export default BackToTopButtton;
+export default BackToTopButton;

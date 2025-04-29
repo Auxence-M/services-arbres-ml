@@ -3,7 +3,7 @@ import {useLocation } from "react-router-dom";
 import { httpsCallable, getFunctions } from "firebase/functions";
 import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
-import BackToTopButtton from "../components/BackToTopButton";
+import BackToTopButton from "../components/BackToTopButton";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
@@ -215,7 +215,7 @@ function Contact() {
 
             </Container> 
 
-            <BackToTopButtton></BackToTopButtton> 
+            <BackToTopButton></BackToTopButton>
 
         </div>
 
